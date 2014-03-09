@@ -5,6 +5,7 @@ registry.push( require("./operators/addition-operator") );
 registry.push( require("./operators/subtraction-operator") );
 registry.push( require("./operators/absolute-operator") );
 registry.push( require("./operators/average-operator") );
+registry.push( require("./operators/clear-operator") );
 
 function getOperator(operatorCharacter) {
 	console.log("finding operator for " + operatorCharacter + "; current registry has " + registry);
