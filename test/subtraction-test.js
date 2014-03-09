@@ -33,3 +33,14 @@ exports.subtractTwoNumbers = function (test) {
 	test.done();
 };
 
+exports.subtractThreeNumbers = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(21);
+	calc.enter(13);
+	calc.perform("-");
+	calc.enter(5);
+	var result = calc.perform("-");
+	test.equals(3,result);
+	test.done();
+};
+
