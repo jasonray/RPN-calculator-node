@@ -1,4 +1,4 @@
-var calculator = require('../calculator.js');
+var calculator = require('../calculator');
 
 exports.addNoNumbers = function (test) {
 	var calc = new calculator.calc();
