@@ -34,3 +34,12 @@ exports.addThreeNumbers = function (test) {
 	test.equals(6,result);
 	test.done();
 }
+
+exports.addNegativeNumbers = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(-1);
+	calc.enter(-2);
+	var result = calc.perform("+");
+	test.equals(-3,result);
+	test.done();
+}
