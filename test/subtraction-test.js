@@ -24,3 +24,12 @@ exports.subtractOneNumberTwice = function (test) {
 	test.done();
 };
 
+exports.subtractTwoNumbers = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(10);
+	calc.enter(3);
+	var result = calc.perform("-");
+	test.equals(7,result);
+	test.done();
+};
+
