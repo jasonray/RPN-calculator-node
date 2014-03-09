@@ -21,7 +21,7 @@ function doOperation(numbers) {
 }
 
 function handlesOperatorCharacter(operator) {
-	return (operator=="AVE" || operator=="AVERAGE");
+	return (operator.toUpperCase()=="AVE" || operator.toUpperCase()=="AVERAGE");
 }
 
 exports.doOperation=doOperation;

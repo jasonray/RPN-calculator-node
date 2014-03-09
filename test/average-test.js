@@ -47,3 +47,11 @@ exports.averageWithNegativeNumbers = function (test) {
 	test.equals(-1,calc.perform("AVE"));
 	test.done();
 };
+
+exports.ensureOperatorNotCaseSensitive = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(2);
+	calc.enter(4);
+	test.equals(3,calc.perform("ave"));
+	test.done();
+};
