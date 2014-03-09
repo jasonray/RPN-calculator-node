@@ -32,3 +32,11 @@ exports.multiplePeeks = function (test) {
 	test.done();
 };
 
+exports.emptyStackWithPopsNextReturns0 = function (test) {
+	var stack =  new rpnstack.stack();
+	stack.push(2);
+	test.equals(2,stack.pop());
+	test.equals(0,stack.peek());
+	test.done();
+};
+
