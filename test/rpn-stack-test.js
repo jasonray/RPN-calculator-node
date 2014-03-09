@@ -52,4 +52,3 @@ exports.pushPop = function(test) {
 	test.equals(1,stack.pop());
 	test.done();
 }
-
