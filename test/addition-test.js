@@ -23,3 +23,14 @@ exports.addOneNumber = function (test) {
 	test.equals(4,result);
 	test.done();
 }
+
+exports.addThreeNumbers = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(1);
+	calc.enter(2);
+	calc.enter(3);
+	calc.perform("+");
+	var result = calc.perform("+");
+	test.equals(6,result);
+	test.done();
+}
