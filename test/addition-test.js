@@ -15,3 +15,11 @@ exports.addTwoNumbersReturnsSum = function (test) {
 	test.equals(34,result);
 	test.done();
 }
+
+exports.addOneNumber = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(4);
+	var result = calc.perform("+");
+	test.equals(4,result);
+	test.done();
+}
