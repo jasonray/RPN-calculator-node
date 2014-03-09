@@ -55,3 +55,17 @@ exports.ensureOperatorNotCaseSensitive = function (test) {
 	test.equals(3,calc.perform("ave"));
 	test.done();
 };
+
+exports.ensureEmptyAverageAffectsStack = function (test) {
+	//if empty average does not put 0 onto stack
+	//then average with 2 would be 2
+	//if empty average does put 0 onto stack
+	//then average with 2 would be 1 (0,1)
+
+	var calc = new calculator.calc();
+	calc.perform("ave");
+	calc.enter(2);
+	test.equals(1,calc.perform("ave"));
+	test.done();
+};
+
