@@ -22,8 +22,7 @@ function stack() {
 	}
 
 	this.isEmpty = function() {
-		var result = internalStack.length==0;
-		return (result);
+		return (internalStack.length==0);
 	}
 
 }
