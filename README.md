@@ -47,3 +47,8 @@ function handlesOperatorCharacter(operator) {
 exports.doOperation=doOperation;
 exports.handlesOperatorCharacter=handlesOperatorCharacter;
 ```
+
+4) Register operator in `operator-register.js`.  To do this, add the following statement: 
+```
+registry.push( require("./operators/<your operator implementation file>") );
+```
