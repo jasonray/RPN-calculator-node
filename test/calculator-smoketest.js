@@ -17,3 +17,14 @@ exports.enterNonNumericValue = function(test) {
 	);
 	test.done();
 }
+
+exports.handleUnknownOperatorCharacter = function(test) {
+	var calc = new calculator.calc();
+	test.throws( 
+		function() {
+			calc.perform("unknown")
+		},
+		Error
+	);
+	test.done();
+}
