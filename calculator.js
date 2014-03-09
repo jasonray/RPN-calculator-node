@@ -15,11 +15,20 @@ function calc() {
 	}
 
 	this.perform = function (operatorCharacter) {
-		var lhs = stack.pop();
-		var rhs = stack.pop();
-		var result = lhs + rhs;
-		stack.push(result);
-		return result;
+		if (operatorCharacter=="+") {
+			var rhs = stack.pop();
+			var lhs = stack.pop();
+			var result = lhs + rhs;
+			stack.push(result);
+			return result;
+		} else if (operatorCharacter=="-") {
+			var rhs = stack.pop();
+			var lhs = stack.pop();
+			var result = lhs - rhs;
+			stack.push(result);
+			return result;
+		}
+
 	}
 
 
