@@ -1,9 +1,15 @@
-var rpnstack = require('../rpn-stack.js');
+var rpnstack = require('../rpn-stack');
 
 exports.popEmptyStack = function (test) {
 	var stack = new rpnstack.stack();
 	var result = stack.pop();
 	test.equals(0,result);
+	test.done();
+};
+
+exports.peekEmptyStack = function (test) {
+	var stack = new rpnstack.stack();
+	test.equals(0,stack.peek());
 	test.done();
 };
 
@@ -39,4 +45,11 @@ exports.emptyStackWithPopsNextReturns0 = function (test) {
 	test.equals(0,stack.peek());
 	test.done();
 };
+
+exports.pushPop = function(test) {
+	var stack =  new rpnstack.stack();
+	stack.push(1);
+	test.equals(1,stack.pop());
+	test.done();
+}
 
