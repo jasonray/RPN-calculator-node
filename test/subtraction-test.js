@@ -15,3 +15,12 @@ exports.subtractOneNumber = function (test) {
 	test.done();
 };
 
+exports.subtractOneNumberTwice = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(1);
+	calc.perform("-");
+	var result = calc.perform("-");
+	test.equals(1,result);
+	test.done();
+};
+
