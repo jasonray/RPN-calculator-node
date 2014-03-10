@@ -10,12 +10,19 @@ function doOperation(numbers) {
 }
 
 function fib(n) {
+	var prev1 = 1;
+	var prev2 = 0;
+
 	if (n<=0) 
 		return 0;
-	if (n==1)
-		return 1;
 
-	return ( fib(n-2) + fib(n-1) );
+	for (var i = 1; i<n; i++) {
+		var sum = prev1+prev2;
+		prev2 = prev1;
+		prev1 = sum;
+	}
+
+	return prev1;
 }
 
 function handlesOperatorCharacter(operator) {
