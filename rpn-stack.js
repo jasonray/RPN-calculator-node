@@ -2,10 +2,7 @@ function stack() {
 	var internalStack=new Array();
 
 	this.push = function(n) {
-		console.log("pushing " + n + " to " + internalStack);
-
 		internalStack.push(n);
-		console.log("stack: " + internalStack);
 	}
 
 	this.pop = function() {
