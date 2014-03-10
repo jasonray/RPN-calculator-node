@@ -13,10 +13,10 @@ function getOperator(operatorCharacter) {
 	var relevantOperator = null;
 	if (operatorCharacter!=null) {
 		for (var i = 0; i < registry.length; i++) {
-    		var operator = registry[i];
-    		if (operator.handlesOperatorCharacter(operatorCharacter)) {
+			var operator = registry[i];
+			if (operator.handlesOperatorCharacter(operatorCharacter)) {
     			relevantOperator = operator;
-    		}
+			}
 		}
 	}
 	return relevantOperator;
