@@ -1,4 +1,4 @@
-RPN-calculator-node
+RPN-calculator-js
 ===================
 
 The RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.
