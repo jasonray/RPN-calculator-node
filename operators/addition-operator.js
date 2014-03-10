@@ -10,7 +10,6 @@ function doOperation(numbers) {
 }
 
 function handlesOperatorCharacter(operator) {
-	console.log("addition-operator checking to see supports " + operator);
 	return (operator=="+");
 }
 
