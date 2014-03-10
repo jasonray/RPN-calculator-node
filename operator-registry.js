@@ -7,6 +7,7 @@ registry.push( require("./operators/absolute-operator") );
 registry.push( require("./operators/average-operator") );
 registry.push( require("./operators/clear-operator") );
 registry.push( require("./operators/factorial-operator") );
+registry.push( require("./operators/fibonacci-operator") );
 
 function getOperator(operatorCharacter) {
 	var relevantOperator = null;
