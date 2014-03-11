@@ -9,9 +9,4 @@ function doOperation(numbers) {
 			return result;
 }
 
-function handlesOperatorCharacter(operator) {
-	return (operator=="-");
-}
-
 exports.doOperation=doOperation;
-exports.handlesOperatorCharacter=handlesOperatorCharacter;
