@@ -1,25 +1,28 @@
-var rpnstack = require("./rpn-stack");
+function registry() {
+	console.log("running registry");
 
-var registry = new Array();
-registry.push( require("./operators/addition-operator") );
-registry.push( require("./operators/subtraction-operator") );
-registry.push( require("./operators/absolute-operator") );
-registry.push( require("./operators/average-operator") );
-registry.push( require("./operators/clear-operator") );
-registry.push( require("./operators/factorial-operator") );
-registry.push( require("./operators/fibonacci-operator") );
+	var handlers = {};
 
-function getOperator(operatorCharacter) {
-	var relevantOperator = null;
-	if (operatorCharacter!=null) {
-		for (var i = 0; i < registry.length; i++) {
-			var operator = registry[i];
-			if (operator.handlesOperatorCharacter(operatorCharacter)) {
-    			relevantOperator = operator;
-			}
+	this.registerHandler = function(operatorCharacter, operatorMethod) {
+		operatorCharacter = operatorCharacter.toLowerCase();
+		handlers[operatorCharacter] = operatorMethod;
+	}	
+
+	this.getOperatorMethod = function(operatorCharacter) {	
+		operatorCharacter = operatorCharacter.toLowerCase();
+		var handler = handlers[operatorCharacter];
+		if (typeof handler === 'function') {
+	    	return handler;
+	    }
+		else if (typeof handler === 'object') {
+    		return handle[operatorCharacter].doOperation;
+  		} else {
+			console.log("return null");
+  			return null;
 		}
 	}
-	return relevantOperator;
+
+	console.log("done running registry");
 }
 
-exports.getOperator = getOperator;
+exports.registry = registry;
