@@ -20,9 +20,4 @@ function doOperation(numbers) {
 	return result;
 }
 
-function handlesOperatorCharacter(operator) {
-	return (operator.toUpperCase()=="AVE" || operator.toUpperCase()=="AVERAGE");
-}
-
 exports.doOperation=doOperation;
-exports.handlesOperatorCharacter=handlesOperatorCharacter;
