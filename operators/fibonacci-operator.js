@@ -25,9 +25,4 @@ function fib(n) {
 	return prev1;
 }
 
-function handlesOperatorCharacter(operator) {
-	return (operator.toUpperCase()=="FIB" || operator.toUpperCase()=="FIBONACCI");
-}
-
 exports.doOperation=doOperation;
-exports.handlesOperatorCharacter=handlesOperatorCharacter;
