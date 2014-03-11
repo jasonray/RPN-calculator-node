@@ -8,9 +8,4 @@ function doOperation(numbers) {
 	return 0;
 }
 
-function handlesOperatorCharacter(operator) {
-	return (operator.toUpperCase()=="C" || operator.toUpperCase()=="CLEAR");
-}
-
 exports.doOperation=doOperation;
-exports.handlesOperatorCharacter=handlesOperatorCharacter;
