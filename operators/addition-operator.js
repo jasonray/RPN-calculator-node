@@ -14,4 +14,3 @@ function handlesOperatorCharacter(operator) {
 }
 
 exports.doOperation=doOperation;
-exports.handlesOperatorCharacter=handlesOperatorCharacter;
