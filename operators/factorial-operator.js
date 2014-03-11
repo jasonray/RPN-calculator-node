@@ -12,9 +12,4 @@ function doOperation(numbers) {
 	return product;
 }
 
-function handlesOperatorCharacter(operator) {
-	return (operator.toUpperCase()=="!" || operator.toUpperCase()=="FACTORIAL");
-}
-
 exports.doOperation=doOperation;
-exports.handlesOperatorCharacter=handlesOperatorCharacter;
