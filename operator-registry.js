@@ -1,6 +1,4 @@
 function registry() {
-	console.log("running registry");
-
 	var handlers = {};
 
 	this.registerHandler = function(operatorCharacter, operatorMethod) {
@@ -22,7 +20,6 @@ function registry() {
 		}
 	}
 
-	console.log("done running registry");
 }
 
 exports.registry = registry;

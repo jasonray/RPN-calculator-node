@@ -1,27 +1,10 @@
 var rpnstack = require("./rpn-stack");
 var registryModule = require("./operator-registry");
 
+
 function calc() {
 	var numbers=new rpnstack.stack();
 	var operatorRegistry=initializeRegistry();
-
-	this.processInputStream = function(stream) {
-		var inputArray = stream.split(" ");
-		var result="";
-
-		for (var i=0; i<inputArray.length; i++) {
-			var nextElement = inputArray[i];
-			if (isNaN(nextElement)) {
-				console.log("operator:" + nextElement);
-				result=this.perform(nextElement);
-			} else {
-				console.log("operand:" + nextElement);
-				this.enter(parseInt(nextElement));
-			}
-		}
-
-		return result;
-	}
 
 	this.enter = function(operand) {
 		if (!isNumber(operand)) {
@@ -38,7 +21,7 @@ function calc() {
 		var operator = operatorRegistry.getOperatorMethod(operatorCharacter);
 
 		if (operator == null) {
-			throw new Error("Unknown operator " + operatorCharacter);
+			throw new Error("Unknown operator '" + operatorCharacter + "'");
 		}
 
 		return operator(numbers);
@@ -62,6 +45,23 @@ function calc() {
 
 }
 
+console.log("result: " + processCommandlineArgs(new calc()));
+function processCommandlineArgs(calc) {
+		process.argv.forEach(function (val, index, array) {
+			if (index==0) {
+				//this is likely 'node'
+			}
+			else if (index==1) {
+				//this is likely 'calculator.js'
+			} else if (isNaN(val)) {
+				// console.log("operator:" + val);
+				result=calc.perform(val);
+			} else {
+				// console.log("operand:" + val);
+				calc.enter(parseInt(val));
+			}
+		});
+		return result;
+	}
+
 exports.calc = calc;
-
-
