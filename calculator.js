@@ -40,28 +40,10 @@ function calc() {
 		registry.registerHandler("clear", require("./operators/clear-operator").doOperation);
 		registry.registerHandler("fib", require("./operators/fibonacci-operator").doOperation);
 		registry.registerHandler("!", require("./operators/factorial-operator").doOperation);
+		registry.registerHandler("sum", require("./operators/sum-operator").doOperation);
 		return registry;
 	}
 
 }
-
-console.log("result: " + processCommandlineArgs(new calc()));
-function processCommandlineArgs(calc) {
-		process.argv.forEach(function (val, index, array) {
-			if (index==0) {
-				//this is likely 'node'
-			}
-			else if (index==1) {
-				//this is likely 'calculator.js'
-			} else if (isNaN(val)) {
-				// console.log("operator:" + val);
-				result=calc.perform(val);
-			} else {
-				// console.log("operand:" + val);
-				calc.enter(parseInt(val));
-			}
-		});
-		return result;
-	}
 
 exports.calc = calc;
