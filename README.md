@@ -9,11 +9,24 @@ How to run
 ==========
 This implementation utilizes node.js and nodeunit.
 
+Prereq's
+--------
 To install node.js, either download or install using brew
 ```
 brew install node
 ```
 
+Run from command line
+---------------------
+You can run the calculator from the command line by running:
+```
+node calculator.js 1 2 +
+```
+
+Note that '*' has unix command line meaning, so us 'x' for multiplication.
+
+Unit Test
+---------
 To run the unit tests, run the following shell script:
 ```
 ./runtest.sh
