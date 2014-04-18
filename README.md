@@ -16,6 +16,11 @@ To install node.js, either download or install using brew
 brew install node
 ```
 
+To install the node modules:
+```
+npm install
+```
+
 Run from command line
 ---------------------
 You can run the calculator from the command line by running:
