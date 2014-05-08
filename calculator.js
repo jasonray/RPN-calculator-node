@@ -3,8 +3,8 @@ var registryModule = require("./operator-registry");
 
 
 function calc() {
-	var numbers=new rpnstack.stack();
-	var operatorRegistry=initializeRegistry();
+	var numbers = new rpnstack.stack();
+	var operatorRegistry = initializeRegistry();
 
 	this.enter = function(operand) {
 		if (!isNumber(operand)) {
@@ -12,20 +12,21 @@ function calc() {
 		}
 
 		numbers.push(operand);
-	}
+	};
+
 	function isNumber(n) {
-  		return !isNaN(parseFloat(n)) && isFinite(n);
+		return !isNaN(parseFloat(n)) && isFinite(n);
 	}
 
 	this.perform = function(operatorCharacter) {
 		var operator = operatorRegistry.getOperatorMethod(operatorCharacter);
 
-		if (operator == null) {
+		if (!operator) {
 			throw new Error("Unknown operator '" + operatorCharacter + "'");
 		}
 
 		return operator(numbers);
-	}
+	};
 
 	function initializeRegistry() {
 		var registry = new registryModule.registry();
