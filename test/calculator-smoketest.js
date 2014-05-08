@@ -16,15 +16,15 @@ exports.enterNonNumericValue = function(test) {
 		Error
 	);
 	test.done();
-}
+};
 
 exports.handleUnknownOperatorCharacter = function(test) {
 	var calc = new calculator.calc();
 	test.throws(
 		function() {
-			calc.perform("unknown")
+			calc.perform("unknown");
 		},
 		Error
 	);
 	test.done();
-}
+};
