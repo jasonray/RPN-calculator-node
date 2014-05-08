@@ -43,3 +43,12 @@ exports.addNegativeNumbers = function (test) {
 	test.equals(-3,result);
 	test.done();
 }
+
+exports.addDecimals = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(1.5);
+	calc.enter(2.3);
+	var result = calc.perform("+");
+	test.equals(3.8,result);
+	test.done();
+}
