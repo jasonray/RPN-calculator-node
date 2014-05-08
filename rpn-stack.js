@@ -1,5 +1,5 @@
 function stack() {
-	var internalStack=new Array();
+	var internalStack = new Array();
 
 	this.push = function(n) {
 		internalStack.push(n);
@@ -17,12 +17,12 @@ function stack() {
 		if (this.isEmpty()) {
 			return 0;
 		} else {
-			return internalStack[internalStack.length-1];
+			return internalStack[internalStack.length - 1];
 		}
 	}
 
 	this.isEmpty = function() {
-		return (internalStack.length==0);
+		return (internalStack.length == 0);
 	}
 
 }
