@@ -22,7 +22,7 @@ function stack() {
 	};
 
 	this.isEmpty = function() {
-		return (internalStack.length == 0);
+		return (internalStack.length === 0);
 	};
 
 }
