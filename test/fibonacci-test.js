@@ -75,3 +75,13 @@ exports.fib40 = function(test) {
 	test.equals(102334155, calc.perform("fib"));
 	test.done();
 };
+
+exports.nonInteger = function(test) {
+	var calc = new calculator.calc();
+	calc.enter(1.1);
+	test.throws(function() {
+		calc.perform("fib");
+	}, Error);
+
+	test.done();
+};
