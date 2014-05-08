@@ -22,7 +22,7 @@ exports.multiplyOneNumber = function(test) {
 	var result = calc.perform("*");
 	test.equals(0, result);
 	test.done();
-}
+};
 
 exports.multiplyThreeNumbers = function(test) {
 	var calc = new calculator.calc();
