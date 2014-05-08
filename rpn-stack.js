@@ -1,5 +1,5 @@
 function stack() {
-	var internalStack = new Array();
+	internalStack = [];
 
 	this.push = function(n) {
 		internalStack.push(n);
