@@ -21,6 +21,7 @@ exports.ensureSupportForWordClear = function(test) {
 	test.equals(0, calc.perform("+"));
 	test.done();
 };
+
 exports.ensureSupportForLowerCaseOperator = function(test) {
 	var calc = new calculator.calc();
 	calc.enter(1);
