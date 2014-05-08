@@ -4,7 +4,7 @@ function registry() {
 	this.registerHandler = function(operatorCharacter, operatorMethod) {
 		operatorCharacter = operatorCharacter.toLowerCase();
 		handlers[operatorCharacter] = operatorMethod;
-	}
+	};
 
 	this.getOperatorMethod = function(operatorCharacter) {
 		operatorCharacter = operatorCharacter.toLowerCase();
@@ -17,7 +17,7 @@ function registry() {
 			console.log("return null");
 			return null;
 		}
-	}
+	};
 
 }
 
