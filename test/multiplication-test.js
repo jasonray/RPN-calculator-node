@@ -62,7 +62,6 @@ exports.multiplyWithX = function(test) {
 	test.done();
 };
 
-
 exports.multiplyWithNonInteger = function(test) {
 	var calc = new calculator.calc();
 	calc.enter(1.5);
