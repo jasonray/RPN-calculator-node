@@ -41,7 +41,7 @@ Unit Test
 ---------
 To run the unit tests, run the following shell script:
 ```
-./runtest.sh
+npm test
 ```
 
 To add a new operator

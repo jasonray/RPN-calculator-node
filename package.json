@@ -1,5 +1,25 @@
 {
-	"dependencies": {
-		"nodeunit": "*"
-	}
+  "dependencies": {
+    "nodeunit": "*"
+  },
+  "name": "RPN-calculator-node",
+  "description": "The RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.",
+  "version": "1.0.0",
+  "main": "calculator-commandline.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node_modules/nodeunit/bin/nodeunit test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonray/RPN-calculator-node"
+  },
+  "author": "jason ray <jason@jayray.net> (https://github.com/jasonray)",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/jasonray/RPN-calculator-node/issues"
+  }
 }
