@@ -33,7 +33,7 @@ exports.multiplyThreeNumbers = function(test) {
 	var result = calc.perform("*");
 	test.equals(24, result);
 	test.done();
-}
+};
 
 exports.multiplyNegativeNumbers = function(test) {
 	var calc = new calculator.calc();
