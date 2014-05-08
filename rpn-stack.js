@@ -19,11 +19,11 @@ function stack() {
 		} else {
 			return internalStack[internalStack.length - 1];
 		}
-	}
+	};
 
 	this.isEmpty = function() {
 		return (internalStack.length == 0);
-	}
+	};
 
 }
 
