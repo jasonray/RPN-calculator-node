@@ -13,7 +13,7 @@ function processCommandlineArgs(calc) {
 			result = calc.perform(val);
 		} else {
 			// console.log("operand:" + val);
-			calc.enter(parseInt(val, 10));
+			result = calc.enter(parseInt(val, 10));
 		}
 	});
 	return result;

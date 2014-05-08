@@ -12,6 +12,8 @@ function calc() {
 		}
 
 		numbers.push(operand);
+
+		return operand;
 	};
 
 	function isNumber(n) {
