@@ -43,3 +43,12 @@ exports.subtractThreeNumbers = function(test) {
 	test.equals(3, result);
 	test.done();
 };
+
+exports.subtractWithNonInteger = function(test) {
+	var calc = new calculator.calc();
+	calc.enter(1.5);
+	calc.enter(0.3);
+	var result = calc.perform("-");
+	test.equals(1.2, result);
+	test.done();
+};
