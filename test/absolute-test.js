@@ -43,3 +43,9 @@ exports.ensureResultIsOnStack = function (test) {
 	test.done();
 };
 
+exports.decimal = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(-1.5);
+	test.equals(1.5,calc.perform("||"));
+	test.done();
+};
