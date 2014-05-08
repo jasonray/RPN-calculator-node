@@ -3,7 +3,7 @@ function stack() {
 
 	this.push = function(n) {
 		internalStack.push(n);
-	}
+	};
 
 	this.pop = function() {
 		if (this.isEmpty()) {
