@@ -11,7 +11,7 @@ function stack() {
 		} else {
 			return internalStack.pop();
 		}
-	}
+	};
 
 	this.peek = function() {
 		if (this.isEmpty()) {
