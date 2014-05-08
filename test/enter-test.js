@@ -14,6 +14,6 @@ exports.enterNumberReturnsValue = function(test) {
 
 exports.enterNonInteger = function(test) {
 	var calc = new calculator.calc();
-	test.equals(1.5, calc.enter("1"));
+	test.equals(1.5, calc.enter("1.5"));
 	test.done();
 };
