@@ -2,6 +2,7 @@ function registry() {
 	var handlers = {};
 
 	this.registerHandler = function(operatorCharacter, operatorMethod) {
+		// console.log("registering " + operatorCharacter + " to " + operatorMethod);
 		operatorCharacter = operatorCharacter.toLowerCase();
 		handlers[operatorCharacter] = operatorMethod;
 	};
