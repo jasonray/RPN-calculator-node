@@ -21,3 +21,14 @@ exports.twoFactorials = function (test) {
 	test.done();
 };
 
+exports.nonInteger = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(3.1);
+
+	test.throws(function() {
+		calc.perform("!");
+	}, Error);
+
+	test.done();
+};
+
