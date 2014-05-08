@@ -3,13 +3,13 @@ var rpnstack = require("../rpn-stack");
 function doOperation(numbers) {
 	var n = numbers.pop();
 
-		if (!isInteger(n)) {
-			throw new Error("cannot enter non-integer values");
-		}
+	if (!isInteger(n)) {
+		throw new Error("cannot enter non-integer values");
+	}
 
 	var product = 1;
 
-	for(var i = n; i>0; i--) {
+	for (var i = n; i > 0; i--) {
 		product = product * i;
 	}
 
@@ -17,8 +17,8 @@ function doOperation(numbers) {
 	return product;
 }
 
-exports.doOperation=doOperation;
+exports.doOperation = doOperation;
 
 function isInteger(n) {
-	return (n == parseInt(n,10));
+	return (n == parseInt(n, 10));
 }
