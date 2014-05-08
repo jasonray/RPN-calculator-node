@@ -17,11 +17,11 @@ function fib(n) {
 	var prev1 = 1;
 	var prev2 = 0;
 
-	if (n<=0) 
+	if (n <= 0)
 		return 0;
 
-	for (var i = 1; i<n; i++) {
-		var sum = prev1+prev2;
+	for (var i = 1; i < n; i++) {
+		var sum = prev1 + prev2;
 		prev2 = prev1;
 		prev1 = sum;
 	}
@@ -29,7 +29,7 @@ function fib(n) {
 	return prev1;
 }
 
-exports.doOperation=doOperation;
+exports.doOperation = doOperation;
 
 function isInteger(n) {
 	return (n == parseInt(n, 10));
