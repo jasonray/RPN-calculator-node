@@ -42,7 +42,7 @@ exports.multiplyNegativeNumbers = function(test) {
 	var result = calc.perform("*");
 	test.equals(6, result);
 	test.done();
-}
+};
 
 exports.multiplyWithx = function(test) {
 	var calc = new calculator.calc();
