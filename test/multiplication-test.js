@@ -14,7 +14,7 @@ exports.multiplyTwoNumbersReturnsSum = function(test) {
 	var result = calc.perform("*");
 	test.equals(20, result);
 	test.done();
-}
+};
 
 exports.multiplyOneNumber = function(test) {
 	var calc = new calculator.calc();
