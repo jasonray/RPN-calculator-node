@@ -4,11 +4,11 @@ function doOperation(numbers) {
 	var sum = 0;
 
 	while (!numbers.isEmpty()) {
-		sum=sum+numbers.pop();
+		sum = sum + numbers.pop();
 	}
 
 	numbers.push(sum);
 	return sum;
 }
 
-exports.doOperation=doOperation;
+exports.doOperation = doOperation;
