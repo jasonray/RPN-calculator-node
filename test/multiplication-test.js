@@ -51,7 +51,7 @@ exports.multiplyWithx = function(test) {
 	var result = calc.perform("x");
 	test.equals(20, result);
 	test.done();
-}
+};
 
 exports.multiplyWithX = function(test) {
 	var calc = new calculator.calc();
