@@ -39,3 +39,12 @@ exports.subtractThreeNumbers = function(test) {
 	test.equals(20, calc.perform("sum"));
 	test.done();
 };
+
+exports.sumNonIntegers = function(test) {
+	var calc = new calculator.calc();
+	calc.enter(1.5);
+	calc.enter(3.5);
+	calc.enter(2.5);
+	test.equals(7.5, calc.perform("sum"));
+	test.done();
+};
