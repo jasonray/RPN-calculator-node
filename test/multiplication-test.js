@@ -60,4 +60,4 @@ exports.multiplyWithX = function(test) {
 	var result = calc.perform("X");
 	test.equals(20, result);
 	test.done();
-}
+};
