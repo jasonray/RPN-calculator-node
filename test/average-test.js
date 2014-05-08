@@ -69,3 +69,10 @@ exports.ensureEmptyAverageAffectsStack = function (test) {
 	test.done();
 };
 
+exports.resultIsNonInteger = function (test) {
+	var calc = new calculator.calc();
+	calc.enter(1);
+	calc.enter(4);
+	test.equals(2.5,calc.perform("AVE"));
+	test.done();
+};
