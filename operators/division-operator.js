@@ -1,6 +1,3 @@
-var rpnstack = require("../rpn-stack");
-
-// accepts the rpn-stack
 function doOperation(numbers) {
 	var rhs = numbers.pop();
 	var lhs = numbers.pop();
