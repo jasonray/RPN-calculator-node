@@ -1,6 +1,6 @@
 var rpnstack = require("../rpn-stack");
 
-function doOperation(numbers) {
+exports.doOperation = function doOperation(numbers) {
 	var n = numbers.pop();
 
 	if (!isInteger(n)) {
@@ -11,7 +11,7 @@ function doOperation(numbers) {
 
 	numbers.push(result);
 	return result;
-}
+};
 
 function fib(n) {
 	var prev1 = 1;
@@ -29,7 +29,7 @@ function fib(n) {
 	return prev1;
 }
 
-exports.doOperation = doOperation;
+
 
 function isInteger(n) {
 	return (n == parseInt(n, 10));
