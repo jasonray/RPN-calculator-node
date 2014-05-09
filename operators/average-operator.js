@@ -1,5 +1,3 @@
-var rpnstack = require("../rpn-stack");
-
 function doOperation(numbers) {
 	var count = 0;
 	var sum = 0;
