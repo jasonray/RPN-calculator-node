@@ -1,11 +1,9 @@
 var rpnstack = require("../rpn-stack");
 
-function doOperation(numbers) {
+exports.doOperation = function(numbers) {
 	while (!numbers.isEmpty()) {
 		numbers.pop();
 	}
 
 	return 0;
-}
-
-exports.doOperation = doOperation;
+};
