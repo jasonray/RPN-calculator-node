@@ -8,7 +8,7 @@ function doOperation(numbers) {
 	}
 
 	var result;
-	if (count==0) {
+	if (count===0) {
 		result=0;
 	} else {
 		result = sum/count;
