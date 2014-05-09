@@ -1,4 +1,4 @@
-function doOperation(numbers) {
+exports.doOperation = function doOperation(numbers) {
 	var n = numbers.pop();
 
 	if (!isInteger(n)) {
@@ -13,9 +13,7 @@ function doOperation(numbers) {
 
 	numbers.push(product);
 	return product;
-}
-
-exports.doOperation = doOperation;
+};
 
 function isInteger(n) {
 	return (n == parseInt(n, 10));
