@@ -13,8 +13,8 @@ exports.doOperation = function doOperation(numbers) {
 
 	numbers.push(product);
 	return product;
-};
 
-function isInteger(n) {
-	return (n == parseInt(n, 10));
-}
+	function isInteger(n) {
+		return (n == parseInt(n, 10));
+	}
+};
