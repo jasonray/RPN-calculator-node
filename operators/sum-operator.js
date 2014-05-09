@@ -1,6 +1,4 @@
-var rpnstack = require("../rpn-stack");
-
-function doOperation(numbers) {
+exports.doOperation = function doOperation(numbers) {
 	var sum = 0;
 
 	while (!numbers.isEmpty()) {
@@ -9,6 +7,4 @@ function doOperation(numbers) {
 
 	numbers.push(sum);
 	return sum;
-}
-
-exports.doOperation = doOperation;
+};
