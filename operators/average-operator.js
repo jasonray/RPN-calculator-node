@@ -1,4 +1,4 @@
-function doOperation(numbers) {
+exports.doOperation=function (numbers) {
 	var count = 0;
 	var sum = 0;
 
@@ -16,6 +16,4 @@ function doOperation(numbers) {
 
 	numbers.push(result);
 	return result;
-}
-
-exports.doOperation=doOperation;
+};
