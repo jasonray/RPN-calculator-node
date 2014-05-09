@@ -8,4 +8,4 @@ function doOperation(numbers) {
 	return 0;
 }
 
-exports.doOperation=doOperation;
+exports.doOperation = doOperation;
