@@ -3,15 +3,15 @@ var registryModule = require("./operator-registry");
 
 
 function Calculator() {
-	var numbers = new rpnstack.stack();
-	var operatorRegistry = initializeRegistry();
+	this.numbers = new rpnstack.stack();
+	this.operatorRegistry = initializeRegistry();
 
 	this.enter = function(operand) {
 		if (!isNumber(operand)) {
 			throw new Error("cannot enter non-numeric values");
 		}
 
-		numbers.push(operand);
+		this.numbers.push(operand);
 
 		return operand;
 	};
@@ -21,13 +21,13 @@ function Calculator() {
 	}
 
 	this.perform = function(operatorCharacter) {
-		var operator = operatorRegistry.getOperatorMethod(operatorCharacter);
+		var operator = this.operatorRegistry.getOperatorMethod(operatorCharacter);
 
 		if (!operator) {
 			throw new Error("Unknown operator '" + operatorCharacter + "'");
 		}
 
-		return operator(numbers);
+		return operator(this.numbers);
 	};
 
 	function initializeRegistry() {
