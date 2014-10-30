@@ -48,6 +48,7 @@ function calc() {
 		return registry;
 	}
 
+	return this;
 }
 
-module.exports.calc = calc;
+module.exports = calc;
