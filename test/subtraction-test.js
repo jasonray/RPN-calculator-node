@@ -1,14 +1,14 @@
-var calculator = require('../calculator');
+var Calculator = require('../calculator');
 
 exports.subtractNoNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	var result = calc.perform("-");
 	test.equals(0, result);
 	test.done();
 };
 
 exports.subtractOneNumber = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	var result = calc.perform("-");
 	test.equals(-1, result);
@@ -16,7 +16,7 @@ exports.subtractOneNumber = function(test) {
 };
 
 exports.subtractOneNumberTwice = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	calc.perform("-");
 	var result = calc.perform("-");
@@ -25,7 +25,7 @@ exports.subtractOneNumberTwice = function(test) {
 };
 
 exports.subtractTwoNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(10);
 	calc.enter(3);
 	var result = calc.perform("-");
@@ -34,7 +34,7 @@ exports.subtractTwoNumbers = function(test) {
 };
 
 exports.subtractThreeNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(21);
 	calc.enter(13);
 	calc.perform("-");
@@ -45,7 +45,7 @@ exports.subtractThreeNumbers = function(test) {
 };
 
 exports.subtractWithNonInteger = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(0.3);
 	var result = calc.perform("-");
