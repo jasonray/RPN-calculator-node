@@ -9,10 +9,8 @@ function processCommandlineArgs(calc) {
 		} else if (index === 1) {
 			//this is likely 'calculator.js'
 		} else if (isNaN(val)) {
-			// console.log("operator:" + val);
 			result = calc.perform(val);
 		} else {
-			// console.log("operand:" + val);
 			result = calc.enter(parseFloat(val, 10));
 		}
 	});
