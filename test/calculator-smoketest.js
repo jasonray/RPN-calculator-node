@@ -1,14 +1,14 @@
-var calculator = require('../calculator');
+var Calculator = require('../calculator');
 
 exports.emptyAdd = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	var result = calc.perform("+");
 	test.equals(0, result);
 	test.done();
 };
 
 exports.enterNonNumericValue = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	test.throws(
 		function() {
 			calc.enter('a');
@@ -19,7 +19,7 @@ exports.enterNonNumericValue = function(test) {
 };
 
 exports.handleUnknownOperatorCharacter = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	test.throws(
 		function() {
 			calc.perform("unknown");
