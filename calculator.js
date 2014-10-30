@@ -2,7 +2,7 @@ var rpnstack = require("./rpn-stack");
 var registryModule = require("./operator-registry");
 
 
-function calc() {
+function Calculator() {
 	var numbers = new rpnstack.stack();
 	var operatorRegistry = initializeRegistry();
 
@@ -51,4 +51,4 @@ function calc() {
 	return this;
 }
 
-module.exports = calc;
+module.exports = Calculator;
