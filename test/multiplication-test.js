@@ -1,14 +1,14 @@
-var calculator = require('../calculator');
+var Calculator = require('../calculator');
 
 exports.multiplyNoNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	var result = calc.perform("*");
 	test.equals(0, result);
 	test.done();
 };
 
 exports.multiplyTwoNumbersReturnsSum = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(4);
 	var result = calc.perform("*");
@@ -17,7 +17,7 @@ exports.multiplyTwoNumbersReturnsSum = function(test) {
 };
 
 exports.multiplyOneNumber = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(4);
 	var result = calc.perform("*");
 	test.equals(0, result);
@@ -25,7 +25,7 @@ exports.multiplyOneNumber = function(test) {
 };
 
 exports.multiplyThreeNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(4);
 	calc.enter(2);
 	calc.enter(3);
@@ -36,7 +36,7 @@ exports.multiplyThreeNumbers = function(test) {
 };
 
 exports.multiplyNegativeNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(-3);
 	calc.enter(-2);
 	var result = calc.perform("*");
@@ -45,7 +45,7 @@ exports.multiplyNegativeNumbers = function(test) {
 };
 
 exports.multiplyWithx = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(4);
 	var result = calc.perform("x");
@@ -54,7 +54,7 @@ exports.multiplyWithx = function(test) {
 };
 
 exports.multiplyWithX = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(4);
 	var result = calc.perform("X");
@@ -63,7 +63,7 @@ exports.multiplyWithX = function(test) {
 };
 
 exports.multiplyWithNonInteger = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(4);
 	var result = calc.perform("X");
@@ -72,7 +72,7 @@ exports.multiplyWithNonInteger = function(test) {
 };
 
 exports.multiplyResultNonInteger = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(3);
 	var result = calc.perform("X");
