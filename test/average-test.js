@@ -1,20 +1,20 @@
-var calculator = require('../calculator');
+var Calculator = require('../calculator');
 
 exports.averageEmpty = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	test.equals(0, calc.perform("AVE"));
 	test.done();
 };
 
 exports.averageOneNumber = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(5);
 	test.equals(5, calc.perform("AVE"));
 	test.done();
 };
 
 exports.averageTwoNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(15);
 	test.equals(10, calc.perform("AVE"));
@@ -22,7 +22,7 @@ exports.averageTwoNumbers = function(test) {
 };
 
 exports.averageFiveNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(2);
 	calc.enter(3);
@@ -33,7 +33,7 @@ exports.averageFiveNumbers = function(test) {
 };
 
 exports.averageUsingAverageKeyworkd = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(2);
 	calc.enter(4);
 	test.equals(3, calc.perform("AVERAGE"));
@@ -41,7 +41,7 @@ exports.averageUsingAverageKeyworkd = function(test) {
 };
 
 exports.averageWithNegativeNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(2);
 	calc.enter(-4);
 	test.equals(-1, calc.perform("AVE"));
@@ -49,7 +49,7 @@ exports.averageWithNegativeNumbers = function(test) {
 };
 
 exports.ensureOperatorNotCaseSensitive = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(2);
 	calc.enter(4);
 	test.equals(3, calc.perform("ave"));
@@ -62,7 +62,7 @@ exports.ensureEmptyAverageAffectsStack = function(test) {
 	//if empty average does put 0 onto stack
 	//then average with 2 would be 1 (0,1)
 
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.perform("ave");
 	calc.enter(2);
 	test.equals(1, calc.perform("ave"));
@@ -70,7 +70,7 @@ exports.ensureEmptyAverageAffectsStack = function(test) {
 };
 
 exports.resultIsNonInteger = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(4);
 	test.equals(2.5, calc.perform("AVE"));
@@ -78,7 +78,7 @@ exports.resultIsNonInteger = function(test) {
 };
 
 exports.inputIsNonInteger = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(3.5);
 	test.equals(2.5, calc.perform("AVE"));
