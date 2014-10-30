@@ -50,4 +50,4 @@ function calc() {
 
 }
 
-exports.calc = calc;
+module.exports.calc = calc;
