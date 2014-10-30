@@ -1,7 +1,7 @@
-var calculator = require('../calculator');
+var Calculator = require('../calculator');
 
 exports.divideTwoNumber = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(8);
 	calc.enter(2);
 	var result = calc.perform("/");
@@ -10,7 +10,7 @@ exports.divideTwoNumber = function(test) {
 };
 
 exports.divideOneNumber = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(2);
 	var result = calc.perform("/");
 	test.equals(0, result);
@@ -18,7 +18,7 @@ exports.divideOneNumber = function(test) {
 };
 
 exports.divideNoNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	test.throws(function() {
 		calc.perform("/");
 	}, Error);
@@ -26,7 +26,7 @@ exports.divideNoNumbers = function(test) {
 };
 
 exports.divideThreeNumbers = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(16);
 	calc.enter(8);
 	calc.enter(2);
@@ -37,7 +37,7 @@ exports.divideThreeNumbers = function(test) {
 };
 
 exports.divideByZero = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(0);
 	test.throws(function() {
@@ -47,7 +47,7 @@ exports.divideByZero = function(test) {
 };
 
 exports.resultNonInteger = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(6);
 	calc.enter(4);
 	var result = calc.perform("/");
@@ -56,7 +56,7 @@ exports.resultNonInteger = function(test) {
 };
 
 exports.divideWithNonInteger = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(2.5);
 	calc.enter(1.5);
 	var result = calc.perform("/");
