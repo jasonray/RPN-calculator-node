@@ -1,17 +1,17 @@
-var calculator = require('./calculator');
+var Calculator = require('./calculator');
 
-console.log("result: " + processCommandlineArgs(new calculator.calc()));
+console.log("result: " + processCommandlineArgs(new Calculator()));
 
-function processCommandlineArgs(calc) {
+function processCommandlineArgs(calculator) {
 	process.argv.forEach(function(val, index, array) {
 		if (index === 0) {
 			//this is likely 'node'
 		} else if (index === 1) {
 			//this is likely 'calculator.js'
 		} else if (isNaN(val)) {
-			result = calc.perform(val);
+			result = calculator.perform(val);
 		} else {
-			result = calc.enter(parseFloat(val, 10));
+			result = calculator.enter(parseFloat(val, 10));
 		}
 	});
 	return result;
