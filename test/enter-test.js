@@ -1,4 +1,4 @@
-var calculator = require('../calculator');
+var Calculator = require('../calculator');
 
 exports.enterStringReturnsValue = function(test) {
 	var calc = new calculator.calc();
