@@ -1,13 +1,13 @@
-var calculator = require('../calculator');
+var Calculator = require('../calculator');
 
 exports.clearEmpty = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.perform("C");
 	test.done();
 };
 
 exports.clearOnSingle = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	calc.perform("C");
 	test.equals(0, calc.perform("+"));
@@ -15,7 +15,7 @@ exports.clearOnSingle = function(test) {
 };
 
 exports.ensureSupportForWordClear = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	calc.perform("clear");
 	test.equals(0, calc.perform("+"));
@@ -23,7 +23,7 @@ exports.ensureSupportForWordClear = function(test) {
 };
 
 exports.ensureSupportForLowerCaseOperator = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	calc.perform("c");
 	test.equals(0, calc.perform("+"));
@@ -31,7 +31,7 @@ exports.ensureSupportForLowerCaseOperator = function(test) {
 };
 
 exports.clearOnList = function(test) {
-	var calc = new calculator.calc();
+	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(1);
 	calc.enter(1);
