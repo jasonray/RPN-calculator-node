@@ -13,7 +13,7 @@ module.exports.factorialOnNothing = function(test) {
 	test.done();
 };
 
-exports.twoFactorials = function(test) {
+module.exports.twoFactorials = function(test) {
 	var calc = new Calculator();
 	calc.enter(3);
 	calc.perform("!");
