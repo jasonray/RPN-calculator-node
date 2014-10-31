@@ -1,19 +1,19 @@
 var Calculator = require('../calculator');
 
-exports.sumNoNumbers = function(test) {
+module.exports.sumNoNumbers = function(test) {
 	var calc = new Calculator();
 	test.equals(0, calc.perform("sum"));
 	test.done();
 };
 
-exports.sumOneNumber = function(test) {
+module.exports.sumOneNumber = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	test.equals(5, calc.perform("sum"));
 	test.done();
 };
 
-exports.sumTwoNumbers = function(test) {
+module.exports.sumTwoNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(3);
@@ -21,7 +21,7 @@ exports.sumTwoNumbers = function(test) {
 	test.done();
 };
 
-exports.sumThreeNumbers = function(test) {
+module.exports.sumThreeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(3);
@@ -30,7 +30,7 @@ exports.sumThreeNumbers = function(test) {
 	test.done();
 };
 
-exports.subtractThreeNumbers = function(test) {
+module.exports.subtractThreeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(11);
 	calc.enter(5);
@@ -40,7 +40,7 @@ exports.subtractThreeNumbers = function(test) {
 	test.done();
 };
 
-exports.sumNonIntegers = function(test) {
+module.exports.sumNonIntegers = function(test) {
 	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(3.5);
