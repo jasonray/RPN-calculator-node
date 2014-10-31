@@ -1,6 +1,6 @@
 var Calculator = require('../calculator');
 
-exports.factorialReturnsProduct = function(test) {
+module.exports.factorialReturnsProduct = function(test) {
 	var calc = new Calculator();
 	calc.enter(4);
 	test.equals(24, calc.perform("!"));
