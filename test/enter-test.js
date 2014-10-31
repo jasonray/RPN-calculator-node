@@ -12,7 +12,7 @@ module.exports.enterNumberReturnsValue = function(test) {
 	test.done();
 };
 
-exports.enterNonInteger = function(test) {
+module.exports.enterNonInteger = function(test) {
 	var calc = new Calculator();
 	test.equals(1.5, calc.enter("1.5"));
 	test.done();
