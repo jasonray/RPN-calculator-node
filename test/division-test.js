@@ -1,6 +1,6 @@
 var Calculator = require('../calculator');
 
-exports.divideTwoNumber = function(test) {
+module.exports.divideTwoNumber = function(test) {
 	var calc = new Calculator();
 	calc.enter(8);
 	calc.enter(2);
