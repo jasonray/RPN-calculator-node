@@ -5,7 +5,7 @@ var Calculator = require('./calculator');
 console.log("result: " + processCommandlineArgs(new Calculator()));
 
 function processCommandlineArgs(calculator) {
-		var result=0;
+	var result = 0;
 	process.argv.forEach(function(val, index, array) {
 		if (index === 0) {
 			//this is likely 'node'
