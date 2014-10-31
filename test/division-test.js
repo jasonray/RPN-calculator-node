@@ -55,7 +55,7 @@ module.exports.resultNonInteger = function(test) {
 	test.done();
 };
 
-exports.divideWithNonInteger = function(test) {
+module.exports.divideWithNonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(2.5);
 	calc.enter(1.5);
