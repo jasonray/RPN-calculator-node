@@ -34,5 +34,4 @@ Stack.prototype.pop = function() {
 	}
 };
 
-
 module.exports = Stack;
