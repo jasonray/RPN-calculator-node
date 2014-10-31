@@ -1,3 +1,5 @@
+'use strict';
+
 exports.doOperation = function doOperation(numbers) {
 	var rhs = numbers.pop();
 	var lhs = numbers.pop();
