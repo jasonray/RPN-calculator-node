@@ -1,4 +1,4 @@
-function stack() {
+function Stack() {
 	internalStack = [];
 
 	this.push = function(n) {
@@ -29,4 +29,4 @@ function stack() {
 
 }
 
-module.exports = stack;
+module.exports = Stack;
