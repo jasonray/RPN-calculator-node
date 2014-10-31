@@ -21,7 +21,7 @@ module.exports.twoFactorials = function(test) {
 	test.done();
 };
 
-exports.nonInteger = function(test) {
+module.exports.nonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(3.1);
 
