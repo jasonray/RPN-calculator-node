@@ -4,7 +4,7 @@ module.exports = function(numbers) {
 	var n = numbers.pop();
 
 	if (!isInteger(n)) {
-		throw new Error("cannot enter non-integer values");
+		throw new Error("Cannot perform fibonacci on non-integer");
 	}
 
 	var result = fib(n);
