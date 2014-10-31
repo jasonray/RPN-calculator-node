@@ -1,5 +1,5 @@
 var rpnstack = require("./rpn-stack");
-var registryModule = require("./operator-registry");
+var Registry = require("./operator-registry");
 
 
 function Calculator() {
@@ -9,7 +9,7 @@ var self = this;
 	self.operatorRegistry = initializeRegistry();
 
 	function initializeRegistry() {
-		var registry = new registryModule.registry();
+		var registry = new Registry();
 		registry.registerHandler("+", require("./operators/addition-operator").doOperation);
 		registry.registerHandler("*", require("./operators/multiplication-operator").doOperation);
 		registry.registerHandler("x", require("./operators/multiplication-operator").doOperation);

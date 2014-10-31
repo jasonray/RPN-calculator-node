@@ -23,4 +23,4 @@ Registry.prototype.registerHandler = function(operatorCharacter, operatorMethod)
 		}
 	};
 
-module.exports.registry = Registry;
+module.exports = Registry;
