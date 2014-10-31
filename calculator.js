@@ -1,3 +1,5 @@
+'use strict';
+
 var RpnStack = require("./rpn-stack");
 var Registry = require("./operator-registry");
 
