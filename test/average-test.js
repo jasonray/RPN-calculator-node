@@ -1,19 +1,19 @@
 var Calculator = require('../calculator');
 
-exports.averageEmpty = function(test) {
+module.exports.averageEmpty = function(test) {
 	var calc = new Calculator();
 	test.equals(0, calc.perform("AVE"));
 	test.done();
 };
 
-exports.averageOneNumber = function(test) {
+module.exports.averageOneNumber = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	test.equals(5, calc.perform("AVE"));
 	test.done();
 };
 
-exports.averageTwoNumbers = function(test) {
+module.exports.averageTwoNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(15);
@@ -21,7 +21,7 @@ exports.averageTwoNumbers = function(test) {
 	test.done();
 };
 
-exports.averageFiveNumbers = function(test) {
+module.exports.averageFiveNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(2);
@@ -32,7 +32,7 @@ exports.averageFiveNumbers = function(test) {
 	test.done();
 };
 
-exports.averageUsingAverageKeyworkd = function(test) {
+module.exports.averageUsingAverageKeyworkd = function(test) {
 	var calc = new Calculator();
 	calc.enter(2);
 	calc.enter(4);
@@ -40,7 +40,7 @@ exports.averageUsingAverageKeyworkd = function(test) {
 	test.done();
 };
 
-exports.averageWithNegativeNumbers = function(test) {
+module.exports.averageWithNegativeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(2);
 	calc.enter(-4);
@@ -48,7 +48,7 @@ exports.averageWithNegativeNumbers = function(test) {
 	test.done();
 };
 
-exports.ensureOperatorNotCaseSensitive = function(test) {
+module.exports.ensureOperatorNotCaseSensitive = function(test) {
 	var calc = new Calculator();
 	calc.enter(2);
 	calc.enter(4);
@@ -56,7 +56,7 @@ exports.ensureOperatorNotCaseSensitive = function(test) {
 	test.done();
 };
 
-exports.ensureEmptyAverageAffectsStack = function(test) {
+module.exports.ensureEmptyAverageAffectsStack = function(test) {
 	//if empty average does not put 0 onto stack
 	//then average with 2 would be 2
 	//if empty average does put 0 onto stack
@@ -69,7 +69,7 @@ exports.ensureEmptyAverageAffectsStack = function(test) {
 	test.done();
 };
 
-exports.resultIsNonInteger = function(test) {
+module.exports.resultIsNonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(4);
@@ -77,7 +77,7 @@ exports.resultIsNonInteger = function(test) {
 	test.done();
 };
 
-exports.inputIsNonInteger = function(test) {
+module.exports.inputIsNonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(3.5);
