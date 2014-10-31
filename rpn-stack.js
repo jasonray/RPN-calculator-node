@@ -10,13 +10,7 @@ function Stack() {
 		}
 	};
 
-	self.peek = function() {
-		if (this.isEmpty()) {
-			return 0;
-		} else {
-			return self.internalStack[self.internalStack.length - 1];
-		}
-	};
+
 
 
 
@@ -34,6 +28,13 @@ function Stack() {
 		return (self.internalStack.length === 0);
 	};
 
-
+	Stack.prototype.peek = function() {
+		var self = this;
+		if (self.isEmpty()) {
+			return 0;
+		} else {
+			return self.internalStack[self.internalStack.length - 1];
+		}
+	};
 
 module.exports = Stack;
