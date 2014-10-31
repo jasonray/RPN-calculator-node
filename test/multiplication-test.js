@@ -1,13 +1,13 @@
 var Calculator = require('../calculator');
 
-exports.multiplyNoNumbers = function(test) {
+module.exports.multiplyNoNumbers = function(test) {
 	var calc = new Calculator();
 	var result = calc.perform("*");
 	test.equals(0, result);
 	test.done();
 };
 
-exports.multiplyTwoNumbersReturnsSum = function(test) {
+module.exports.multiplyTwoNumbersReturnsSum = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(4);
@@ -16,7 +16,7 @@ exports.multiplyTwoNumbersReturnsSum = function(test) {
 	test.done();
 };
 
-exports.multiplyOneNumber = function(test) {
+module.exports.multiplyOneNumber = function(test) {
 	var calc = new Calculator();
 	calc.enter(4);
 	var result = calc.perform("*");
@@ -24,7 +24,7 @@ exports.multiplyOneNumber = function(test) {
 	test.done();
 };
 
-exports.multiplyThreeNumbers = function(test) {
+module.exports.multiplyThreeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(4);
 	calc.enter(2);
@@ -35,7 +35,7 @@ exports.multiplyThreeNumbers = function(test) {
 	test.done();
 };
 
-exports.multiplyNegativeNumbers = function(test) {
+module.exports.multiplyNegativeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(-3);
 	calc.enter(-2);
@@ -44,7 +44,7 @@ exports.multiplyNegativeNumbers = function(test) {
 	test.done();
 };
 
-exports.multiplyWithx = function(test) {
+module.exports.multiplyWithx = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(4);
@@ -53,7 +53,7 @@ exports.multiplyWithx = function(test) {
 	test.done();
 };
 
-exports.multiplyWithX = function(test) {
+module.exports.multiplyWithX = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(4);
@@ -62,7 +62,7 @@ exports.multiplyWithX = function(test) {
 	test.done();
 };
 
-exports.multiplyWithNonInteger = function(test) {
+module.exports.multiplyWithNonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(4);
@@ -71,7 +71,7 @@ exports.multiplyWithNonInteger = function(test) {
 	test.done();
 };
 
-exports.multiplyResultNonInteger = function(test) {
+module.exports.multiplyResultNonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(3);
