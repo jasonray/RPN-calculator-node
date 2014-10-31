@@ -1,6 +1,6 @@
 var Calculator = require('../calculator');
 
-exports.clearEmpty = function(test) {
+module.exports.clearEmpty = function(test) {
 	var calc = new Calculator();
 	calc.perform("C");
 	test.done();
