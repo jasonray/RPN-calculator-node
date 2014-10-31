@@ -6,7 +6,7 @@ module.exports.enterStringReturnsValue = function(test) {
 	test.done();
 };
 
-exports.enterNumberReturnsValue = function(test) {
+module.exports.enterNumberReturnsValue = function(test) {
 	var calc = new Calculator();
 	test.equals(1, calc.enter(1));
 	test.done();
