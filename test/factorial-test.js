@@ -7,7 +7,7 @@ module.exports.factorialReturnsProduct = function(test) {
 	test.done();
 };
 
-exports.factorialOnNothing = function(test) {
+module.exports.factorialOnNothing = function(test) {
 	var calc = new Calculator();
 	test.equals(1, calc.perform("!"));
 	test.done();
