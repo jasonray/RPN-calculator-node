@@ -1,6 +1,6 @@
 'use strict';
 
-exports.doOperation = function(numbers) {
+module.exports = function(numbers) {
 	var count = 0;
 	var sum = 0;
 
