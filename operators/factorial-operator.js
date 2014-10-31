@@ -1,10 +1,10 @@
 'use strict';
 
-module.exports.doOperation = function(numbers) {
+module.exports = function(numbers) {
 	var n = numbers.pop();
 
 	if (!isInteger(n)) {
-		throw new Error("cannot enter non-integer values");
+		throw new Error("Cannot perform factorial on non-integer");
 	}
 
 	var product = 1;
@@ -17,6 +17,6 @@ module.exports.doOperation = function(numbers) {
 	return product;
 
 	function isInteger(n) {
-		return (n == parseInt(n, 10));
+		return (n === parseInt(n, 10));
 	}
 };

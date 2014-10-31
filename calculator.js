@@ -23,7 +23,7 @@ function Calculator() {
 		registry.registerHandler("c", require("./operators/clear-operator"));
 		registry.registerHandler("clear", require("./operators/clear-operator"));
 		registry.registerHandler("fib", require("./operators/fibonacci-operator").doOperation);
-		registry.registerHandler("!", require("./operators/factorial-operator").doOperation);
+		registry.registerHandler("!", require("./operators/factorial-operator"));
 		registry.registerHandler("sum", require("./operators/sum-operator").doOperation);
 		return registry;
 	}
