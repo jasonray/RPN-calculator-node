@@ -39,7 +39,7 @@ Calculator.prototype.enter = function(operand) {
 	}
 
 	if (!isNumber(operand)) {
-		throw new Error("cannot enter non-numeric values");
+		throw new Error("Cannot enter non-numeric values");
 	}
 
 	self.numbers.push(operand);
