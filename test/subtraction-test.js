@@ -7,7 +7,7 @@ module.exports.subtractNoNumbers = function(test) {
 	test.done();
 };
 
-exports.subtractOneNumber = function(test) {
+module.exports.subtractOneNumber = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	var result = calc.perform("-");
