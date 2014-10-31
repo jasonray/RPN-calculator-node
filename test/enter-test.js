@@ -1,6 +1,6 @@
 var Calculator = require('../calculator');
 
-exports.enterStringReturnsValue = function(test) {
+module.exports.enterStringReturnsValue = function(test) {
 	var calc = new Calculator();
 	test.equals(1, calc.enter("1"));
 	test.done();
