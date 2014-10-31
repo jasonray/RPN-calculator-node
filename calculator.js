@@ -13,8 +13,8 @@ function Calculator() {
 	function initializeRegistry() {
 		var registry = new Registry();
 		registry.registerHandler("+", require("./operators/addition-operator"));
-		registry.registerHandler("*", require("./operators/multiplication-operator").doOperation);
-		registry.registerHandler("x", require("./operators/multiplication-operator").doOperation);
+		registry.registerHandler("*", require("./operators/multiplication-operator"));
+		registry.registerHandler("x", require("./operators/multiplication-operator"));
 		registry.registerHandler("/", require("./operators/division-operator"));
 		registry.registerHandler("-", require("./operators/subtraction-operator").doOperation);
 		registry.registerHandler("||", require("./operators/absolute-operator"));
