@@ -1,6 +1,6 @@
 'use strict';
 
-exports.doOperation = function(numbers) {
+module.exports = function(numbers) {
 	var rhs = numbers.pop();
 	var lhs = numbers.pop();
 	var result = lhs + rhs;
