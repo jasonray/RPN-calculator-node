@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.doOperation = function(numbers) {
+module.exports = function(numbers) {
 	while (!numbers.isEmpty()) {
 		numbers.pop();
 	}

@@ -20,8 +20,8 @@ function Calculator() {
 		registry.registerHandler("||", require("./operators/absolute-operator"));
 		registry.registerHandler("average", require("./operators/average-operator"));
 		registry.registerHandler("ave", require("./operators/average-operator"));
-		registry.registerHandler("c", require("./operators/clear-operator").doOperation);
-		registry.registerHandler("clear", require("./operators/clear-operator").doOperation);
+		registry.registerHandler("c", require("./operators/clear-operator"));
+		registry.registerHandler("clear", require("./operators/clear-operator"));
 		registry.registerHandler("fib", require("./operators/fibonacci-operator").doOperation);
 		registry.registerHandler("!", require("./operators/factorial-operator").doOperation);
 		registry.registerHandler("sum", require("./operators/sum-operator").doOperation);
