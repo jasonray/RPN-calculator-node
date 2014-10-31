@@ -1,10 +1,6 @@
 function Registry() {
 	var self = this;
 	  self.handlers = {};
-
-
-
-
 }
 
 Registry.prototype.registerHandler = function(operatorCharacter, operatorMethod) {
