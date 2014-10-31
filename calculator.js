@@ -24,7 +24,7 @@ function Calculator() {
 		registry.registerHandler("clear", require("./operators/clear-operator"));
 		registry.registerHandler("fib", require("./operators/fibonacci-operator"));
 		registry.registerHandler("!", require("./operators/factorial-operator"));
-		registry.registerHandler("sum", require("./operators/sum-operator").doOperation);
+		registry.registerHandler("sum", require("./operators/sum-operator"));
 		return registry;
 	}
 
