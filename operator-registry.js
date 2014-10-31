@@ -1,15 +1,11 @@
-function registry() {
-	var handlers = {};
+function Registry() {
+	var self = this;
+	  self.handlers = {};
 
-	this.registerHandler = function(operatorCharacter, operatorMethod) {
-		// console.log("registering " + operatorCharacter + " to " + operatorMethod);
-		operatorCharacter = operatorCharacter.toLowerCase();
-		handlers[operatorCharacter] = operatorMethod;
-	};
 
 	this.getOperatorMethod = function(operatorCharacter) {
 		operatorCharacter = operatorCharacter.toLowerCase();
-		var handler = handlers[operatorCharacter];
+		var handler = self.handlers[operatorCharacter];
 		if (typeof handler === 'function') {
 			return handler;
 		} else if (typeof handler === 'object') {
@@ -22,4 +18,11 @@ function registry() {
 
 }
 
-module.exports.registry = registry;
+Registry.prototype.registerHandler = function(operatorCharacter, operatorMethod) {
+		var self = this;
+		operatorCharacter = operatorCharacter.toLowerCase();
+		self.handlers[operatorCharacter] = operatorMethod;
+	};
+
+
+module.exports.registry = Registry;
