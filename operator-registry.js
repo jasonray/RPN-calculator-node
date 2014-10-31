@@ -1,3 +1,5 @@
+'use strict';
+
 function Registry() {
 	var self = this;
 	  self.handlers = {};
