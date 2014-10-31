@@ -6,19 +6,7 @@ function Calculator() {
 	this.numbers = new rpnstack.stack();
 	this.operatorRegistry = initializeRegistry();
 
-	this.enter = function(operand) {
-		if (!isNumber(operand)) {
-			throw new Error("cannot enter non-numeric values");
-		}
 
-		this.numbers.push(operand);
-
-		return operand;
-	};
-
-	function isNumber(n) {
-		return !isNaN(parseFloat(n)) && isFinite(n);
-	}
 
 	this.perform = function(operatorCharacter) {
 		var operator = this.operatorRegistry.getOperatorMethod(operatorCharacter);
@@ -50,5 +38,20 @@ function Calculator() {
 
 	return this;
 }
+
+	Calculator.prototype.enter = function(operand) {
+		function isNumber(n) {
+			return !isNaN(parseFloat(n)) && isFinite(n);
+		}
+
+		if (!isNumber(operand)) {
+			throw new Error("cannot enter non-numeric values");
+		}
+
+		this.numbers.push(operand);
+
+		return operand;
+	};
+
 
 module.exports = Calculator;
