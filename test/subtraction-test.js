@@ -44,7 +44,7 @@ module.exports.subtractThreeNumbers = function(test) {
 	test.done();
 };
 
-exports.subtractWithNonInteger = function(test) {
+module.exports.subtractWithNonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(0.3);
