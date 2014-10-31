@@ -33,7 +33,7 @@ module.exports.subtractTwoNumbers = function(test) {
 	test.done();
 };
 
-exports.subtractThreeNumbers = function(test) {
+module.exports.subtractThreeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(21);
 	calc.enter(13);
