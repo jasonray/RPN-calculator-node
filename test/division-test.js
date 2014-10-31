@@ -9,7 +9,7 @@ module.exports.divideTwoNumber = function(test) {
 	test.done();
 };
 
-exports.divideOneNumber = function(test) {
+module.exports.divideOneNumber = function(test) {
 	var calc = new Calculator();
 	calc.enter(2);
 	var result = calc.perform("/");
