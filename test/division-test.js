@@ -46,7 +46,7 @@ module.exports.divideByZero = function(test) {
 	test.done();
 };
 
-exports.resultNonInteger = function(test) {
+module.exports.resultNonInteger = function(test) {
 	var calc = new Calculator();
 	calc.enter(6);
 	calc.enter(4);
