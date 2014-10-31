@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.doOperation = function(numbers) {
+module.exports = function(numbers) {
 	var n = numbers.pop();
 
 	if (!isInteger(n)) {
