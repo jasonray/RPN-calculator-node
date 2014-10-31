@@ -6,7 +6,7 @@ module.exports.clearEmpty = function(test) {
 	test.done();
 };
 
-exports.clearOnSingle = function(test) {
+module.exports.clearOnSingle = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.perform("C");
