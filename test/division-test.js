@@ -25,7 +25,7 @@ module.exports.divideNoNumbers = function(test) {
 	test.done();
 };
 
-exports.divideThreeNumbers = function(test) {
+module.exports.divideThreeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(16);
 	calc.enter(8);
