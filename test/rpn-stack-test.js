@@ -1,26 +1,26 @@
 var RpnStack = require('../rpn-stack');
 
-exports.popEmptyStack = function(test) {
+module.exports.popEmptyStack = function(test) {
 	var stack = new RpnStack();
 	var result = stack.pop();
 	test.equals(0, result);
 	test.done();
 };
 
-exports.peekEmptyStack = function(test) {
+module.exports.peekEmptyStack = function(test) {
 	var stack = new RpnStack();
 	test.equals(0, stack.peek());
 	test.done();
 };
 
-exports.peekFromPush = function(test) {
+module.exports.peekFromPush = function(test) {
 	var stack = new RpnStack();
 	stack.push(2);
 	test.equals(2, stack.peek());
 	test.done();
 };
 
-exports.popFronmPush = function(test) {
+module.exports.popFronmPush = function(test) {
 	var stack = new RpnStack();
 	stack.push(2);
 	stack.push(5);
@@ -29,7 +29,7 @@ exports.popFronmPush = function(test) {
 	test.done();
 };
 
-exports.multiplePeeks = function(test) {
+module.exports.multiplePeeks = function(test) {
 	var stack = new RpnStack();
 	stack.push(2);
 	stack.push(5);
@@ -38,7 +38,7 @@ exports.multiplePeeks = function(test) {
 	test.done();
 };
 
-exports.emptyStackWithPopsNextReturns0 = function(test) {
+module.exports.emptyStackWithPopsNextReturns0 = function(test) {
 	var stack = new RpnStack();
 	stack.push(2);
 	test.equals(2, stack.pop());
@@ -46,7 +46,7 @@ exports.emptyStackWithPopsNextReturns0 = function(test) {
 	test.done();
 };
 
-exports.pushPop = function(test) {
+module.exports.pushPop = function(test) {
 	var stack = new RpnStack();
 	stack.push(1);
 	test.equals(1, stack.pop());
