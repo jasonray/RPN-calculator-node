@@ -22,7 +22,7 @@ module.exports.ensureSupportForWordClear = function(test) {
 	test.done();
 };
 
-exports.ensureSupportForLowerCaseOperator = function(test) {
+module.exports.ensureSupportForLowerCaseOperator = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.perform("c");
