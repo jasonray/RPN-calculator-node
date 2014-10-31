@@ -8,15 +8,7 @@ function Calculator() {
 
 
 
-	this.perform = function(operatorCharacter) {
-		var operator = this.operatorRegistry.getOperatorMethod(operatorCharacter);
 
-		if (!operator) {
-			throw new Error("Unknown operator '" + operatorCharacter + "'");
-		}
-
-		return operator(this.numbers);
-	};
 
 	function initializeRegistry() {
 		var registry = new registryModule.registry();
@@ -52,6 +44,17 @@ function Calculator() {
 
 		return operand;
 	};
+
+		Calculator.prototype.perform = function(operatorCharacter) {
+		var operator = this.operatorRegistry.getOperatorMethod(operatorCharacter);
+
+		if (!operator) {
+			throw new Error("Unknown operator '" + operatorCharacter + "'");
+		}
+
+		return operator(this.numbers);
+	};
+
 
 
 module.exports = Calculator;
