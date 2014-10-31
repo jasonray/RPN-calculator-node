@@ -24,7 +24,7 @@ module.exports.subtractOneNumberTwice = function(test) {
 	test.done();
 };
 
-exports.subtractTwoNumbers = function(test) {
+module.exports.subtractTwoNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(10);
 	calc.enter(3);
