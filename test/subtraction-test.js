@@ -1,6 +1,6 @@
 var Calculator = require('../calculator');
 
-exports.subtractNoNumbers = function(test) {
+module.exports.subtractNoNumbers = function(test) {
 	var calc = new Calculator();
 	var result = calc.perform("-");
 	test.equals(0, result);
