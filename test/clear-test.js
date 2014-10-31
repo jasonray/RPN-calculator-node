@@ -30,7 +30,7 @@ module.exports.ensureSupportForLowerCaseOperator = function(test) {
 	test.done();
 };
 
-exports.clearOnList = function(test) {
+module.exports.clearOnList = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(1);
