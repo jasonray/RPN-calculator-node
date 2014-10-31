@@ -7,14 +7,12 @@ function Registry() {
 
 Registry.prototype.registerHandler = function(operatorCharacter, operatorMethod) {
 	var self = this;
-	operatorCharacter = operatorCharacter.toLowerCase();
-	self.handlers[operatorCharacter] = operatorMethod;
+	self.handlers[operatorCharacter.toLowerCase()] = operatorMethod;
 };
 
 Registry.prototype.getOperatorMethod = function(operatorCharacter) {
 	var self = this;
-	operatorCharacter = operatorCharacter.toLowerCase();
-	var handler = self.handlers[operatorCharacter];
+	var handler = self.handlers[operatorCharacter.toLowerCase()];
 	if (typeof handler === 'function') {
 		return handler;
 	} else if (typeof handler === 'object') {
