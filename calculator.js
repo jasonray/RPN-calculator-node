@@ -3,12 +3,10 @@ var registryModule = require("./operator-registry");
 
 
 function Calculator() {
-	this.numbers = new rpnstack.stack();
-	this.operatorRegistry = initializeRegistry();
+var self = this;
 
-
-
-
+	self.numbers = new rpnstack.stack();
+	self.operatorRegistry = initializeRegistry();
 
 	function initializeRegistry() {
 		var registry = new registryModule.registry();
@@ -28,10 +26,12 @@ function Calculator() {
 		return registry;
 	}
 
-	return this;
+	return self;
 }
 
 	Calculator.prototype.enter = function(operand) {
+var self = this;
+
 		function isNumber(n) {
 			return !isNaN(parseFloat(n)) && isFinite(n);
 		}
@@ -40,21 +40,20 @@ function Calculator() {
 			throw new Error("cannot enter non-numeric values");
 		}
 
-		this.numbers.push(operand);
+		self.numbers.push(operand);
 
 		return operand;
 	};
 
 		Calculator.prototype.perform = function(operatorCharacter) {
-		var operator = this.operatorRegistry.getOperatorMethod(operatorCharacter);
+			var self = this;
+		var operator = self.operatorRegistry.getOperatorMethod(operatorCharacter);
 
 		if (!operator) {
 			throw new Error("Unknown operator '" + operatorCharacter + "'");
 		}
 
-		return operator(this.numbers);
+		return operator(self.numbers);
 	};
-
-
 
 module.exports = Calculator;
