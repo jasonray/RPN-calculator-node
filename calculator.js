@@ -16,7 +16,7 @@ function Calculator() {
 		registry.registerHandler("*", require("./operators/multiplication-operator"));
 		registry.registerHandler("x", require("./operators/multiplication-operator"));
 		registry.registerHandler("/", require("./operators/division-operator"));
-		registry.registerHandler("-", require("./operators/subtraction-operator").doOperation);
+		registry.registerHandler("-", require("./operators/subtraction-operator"));
 		registry.registerHandler("||", require("./operators/absolute-operator"));
 		registry.registerHandler("average", require("./operators/average-operator"));
 		registry.registerHandler("ave", require("./operators/average-operator"));
