@@ -1,13 +1,13 @@
 var Calculator = require('../calculator');
 
-exports.addNoNumbers = function(test) {
+module.exports.addNoNumbers = function(test) {
 	var calc = new Calculator();
 	var result = calc.perform("+");
 	test.equals(0, result);
 	test.done();
 };
 
-exports.addTwoNumbersReturnsSum = function(test) {
+module.exports.addTwoNumbersReturnsSum = function(test) {
 	var calc = new Calculator();
 	calc.enter(30);
 	calc.enter(4);
@@ -16,7 +16,7 @@ exports.addTwoNumbersReturnsSum = function(test) {
 	test.done();
 };
 
-exports.addOneNumber = function(test) {
+module.exports.addOneNumber = function(test) {
 	var calc = new Calculator();
 	calc.enter(4);
 	var result = calc.perform("+");
@@ -24,7 +24,7 @@ exports.addOneNumber = function(test) {
 	test.done();
 };
 
-exports.addThreeNumbers = function(test) {
+module.exports.addThreeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(2);
@@ -35,7 +35,7 @@ exports.addThreeNumbers = function(test) {
 	test.done();
 };
 
-exports.addNegativeNumbers = function(test) {
+module.exports.addNegativeNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(-1);
 	calc.enter(-2);
@@ -44,7 +44,7 @@ exports.addNegativeNumbers = function(test) {
 	test.done();
 };
 
-exports.addDecimals = function(test) {
+module.exports.addDecimals = function(test) {
 	var calc = new Calculator();
 	calc.enter(1.5);
 	calc.enter(2.3);
