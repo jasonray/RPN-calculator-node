@@ -15,7 +15,7 @@ module.exports.subtractOneNumber = function(test) {
 	test.done();
 };
 
-exports.subtractOneNumberTwice = function(test) {
+module.exports.subtractOneNumberTwice = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.perform("-");
