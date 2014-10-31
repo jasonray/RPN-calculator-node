@@ -22,4 +22,4 @@ function registry() {
 
 }
 
-exports.registry = registry;
+module.exports.registry = registry;
