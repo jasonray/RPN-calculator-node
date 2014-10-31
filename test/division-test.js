@@ -36,7 +36,7 @@ module.exports.divideThreeNumbers = function(test) {
 	test.done();
 };
 
-exports.divideByZero = function(test) {
+module.exports.divideByZero = function(test) {
 	var calc = new Calculator();
 	calc.enter(5);
 	calc.enter(0);
