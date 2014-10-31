@@ -18,9 +18,7 @@ function Stack() {
 		}
 	};
 
-	self.isEmpty = function() {
-		return (self.internalStack.length === 0);
-	};
+
 
 	return self;
 
@@ -29,6 +27,11 @@ function Stack() {
 	Stack.prototype.push = function(n) {
 		var self = this;
 		self.internalStack.push(n);
+	};
+
+		Stack.prototype.isEmpty = function() {
+			var self = this;
+		return (self.internalStack.length === 0);
 	};
 
 
