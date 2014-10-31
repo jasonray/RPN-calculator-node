@@ -1,14 +1,7 @@
 function Stack() {
 	var self = this;
 	self.internalStack = [];
-
-
-
-
-
-
 	return self;
-
 }
 
 	Stack.prototype.push = function(n) {
