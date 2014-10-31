@@ -1,3 +1,5 @@
+'use strict';
+
 exports.doOperation = function doOperation(numbers) {
 	var n = numbers.pop();
 
