@@ -2,10 +2,6 @@ function Stack() {
 	var self = this;
 	self.internalStack = [];
 
-	self.push = function(n) {
-		self.internalStack.push(n);
-	};
-
 	self.pop = function() {
 		if (this.isEmpty()) {
 			return 0;
@@ -29,5 +25,12 @@ function Stack() {
 	return self;
 
 }
+
+	Stack.prototype.push = function(n) {
+		var self = this;
+		self.internalStack.push(n);
+	};
+
+
 
 module.exports = Stack;
