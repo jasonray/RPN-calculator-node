@@ -17,7 +17,7 @@ module.exports.divideOneNumber = function(test) {
 	test.done();
 };
 
-exports.divideNoNumbers = function(test) {
+module.exports.divideNoNumbers = function(test) {
 	var calc = new Calculator();
 	test.throws(function() {
 		calc.perform("/");
