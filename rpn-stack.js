@@ -25,6 +25,8 @@ function stack() {
 		return (internalStack.length === 0);
 	};
 
+	return this;
+
 }
 
-exports.stack = stack;
+module.exports = stack;

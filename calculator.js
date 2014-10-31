@@ -1,11 +1,11 @@
-var rpnstack = require("./rpn-stack");
+var RpnStack = require("./rpn-stack");
 var Registry = require("./operator-registry");
 
 
 function Calculator() {
 var self = this;
 
-	self.numbers = new rpnstack.stack();
+	self.numbers = new RpnStack();
 	self.operatorRegistry = initializeRegistry();
 
 	function initializeRegistry() {
