@@ -16,7 +16,7 @@ Registry.prototype.getOperatorMethod = function(operatorCharacter) {
 	if (typeof handler === 'function') {
 		return handler;
 	} else if (typeof handler === 'object') {
-		return handle[operatorCharacter].doOperation;
+		return handler.doOperation;
 	} else {
 		console.log("return null");
 		return null;
