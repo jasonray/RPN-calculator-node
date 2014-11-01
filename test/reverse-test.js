@@ -30,7 +30,7 @@ module.exports.reverseTwoNumbers = function(test) {
 	test.done();
 };
 
-module.exports.reverseTenNumbers = function(test) {
+module.exports.reverseMultipleNumbers = function(test) {
 	var calc = new Calculator();
 	calc.enter(1);
 	calc.enter(2);
