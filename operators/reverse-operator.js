@@ -1,11 +1,16 @@
 'use strict';
 
 module.exports = function(numbers) {
-	// var n = numbers.pop();
-	// if (n < 0) {
-	// 	n = n * -1;
-	// }
-	// numbers.push(n);
-	// return n;
-	return 0;
+
+	var tempNumbers = [];
+
+	while (!numbers.isEmpty()) {
+		tempNumbers.push(numbers.pop());
+	}
+
+	for (var i=tempNumbers.length; i>0; i-- ) {
+		numbers.push( tempNumbers[i-1] );
+	}
+
+	return numbers.peek();
 };
