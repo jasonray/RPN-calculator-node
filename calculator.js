@@ -25,6 +25,7 @@ function Calculator() {
 		registry.registerHandler("fib", require("./operators/fibonacci-operator"));
 		registry.registerHandler("!", require("./operators/factorial-operator"));
 		registry.registerHandler("sum", require("./operators/sum-operator"));
+		registry.registerHandler("reverse", require("./operators/reverse-operator"));
 		return registry;
 	}
 
