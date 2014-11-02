@@ -34,4 +34,8 @@ Stack.prototype.pop = function() {
 	}
 };
 
+Stack.prototype.toString = function() {
+	return this.internalStack;
+}
+
 module.exports = Stack;

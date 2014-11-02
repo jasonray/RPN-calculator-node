@@ -2,7 +2,9 @@
 
 var Calculator = require('./calculator');
 
-console.log("result: " + processCommandlineArgs(new Calculator()));
+var calculator = new Calculator();
+console.log("result: " + processCommandlineArgs(calculator));
+console.log("post-stack: " , calculator.numbers.toString());
 
 function processCommandlineArgs(calculator) {
 	var result = 0;
