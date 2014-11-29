@@ -18,6 +18,6 @@ module.exports = function(numbers) {
     return product;
 
     function isInteger(n) {
-        return (n === parseInt(n, 10));
+        return n % 1 === 0;
     }
 };
