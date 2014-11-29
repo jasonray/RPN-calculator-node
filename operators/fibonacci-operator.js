@@ -1,6 +1,8 @@
 /*jslint node: true */
 'use strict';
 
+var _ = require('underscore');
+
 module.exports = function(numbers) {
 	var n = numbers.pop();
 
@@ -20,11 +22,11 @@ module.exports = function(numbers) {
 		if (n <= 0)
 			return 0;
 
-		for (var i = 1; i < n; i++) {
-			var sum = prev1 + prev2;
-			prev2 = prev1;
-			prev1 = sum;
-		}
+        _.times(n - 1, function() {
+            var sum = prev1 + prev2;
+            prev2 = prev1;
+            prev1 = sum;
+        });
 
 		return prev1;
 	}
