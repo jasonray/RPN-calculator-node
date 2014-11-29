@@ -1,11 +1,15 @@
 /*jslint node: true */
 'use strict';
 
+var monomialOperator = require('./monomial-operator');
+
 module.exports = function(numbers) {
-    var n = numbers.pop();
-    if (n < 0) {
-        n = n * -1;
-    }
-    numbers.push(n);
-    return n;
-};
+    return monomialOperator(numbers, absolute);
+
+    function absolute(n) {
+        if (n < 0) {
+            n = n * -1;
+        }
+        return n;
+    };
+}
