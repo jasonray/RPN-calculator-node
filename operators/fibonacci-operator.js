@@ -2,18 +2,10 @@
 'use strict';
 
 var _ = require('underscore');
+var monomialOperator = require('./monomial-operator');
 
 module.exports = function(numbers) {
-    var n = numbers.pop();
-
-    if (!isInteger(n)) {
-        throw new Error("Cannot perform fibonacci on non-integer");
-    }
-
-    var result = fib(n);
-
-    numbers.push(result);
-    return result;
+    return monomialOperator(numbers, fib);
 
     function fib(n) {
         var prev1 = 1;
@@ -32,6 +24,7 @@ module.exports = function(numbers) {
     }
 
     function isInteger(n) {
-        return (n == parseInt(n, 10));
+        return n % 1 === 0;
     }
+
 };
