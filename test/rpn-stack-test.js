@@ -1,3 +1,6 @@
+/*jslint node: true */
+'use strict';
+
 var RpnStack = require('../rpn-stack');
 
 module.exports.popEmptyStack = function(test) {
