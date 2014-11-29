@@ -11,5 +11,5 @@ module.exports = function(numbers) {
             n = n * -1;
         }
         return n;
-    };
-}
+    }
+};
