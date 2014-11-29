@@ -2,9 +2,9 @@
 'use strict';
 
 module.exports = function(numbers) {
-	while (!numbers.isEmpty()) {
-		numbers.pop();
-	}
+    while (!numbers.isEmpty()) {
+        numbers.pop();
+    }
 
-	return 0;
+    return 0;
 };
