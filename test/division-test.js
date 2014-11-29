@@ -1,3 +1,6 @@
+/*jslint node: true */
+'use strict';
+
 var Calculator = require('../calculator');
 
 module.exports.divideTwoNumber = function(test) {
