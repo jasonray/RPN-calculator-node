@@ -1,10 +1,12 @@
 /*jslint node: true */
 'use strict';
 
+var binaryOperation = require('./binary-operator');
+
 module.exports = function(numbers) {
-    var rhs = numbers.pop();
-    var lhs = numbers.pop();
-    var result = lhs * rhs;
-    numbers.push(result);
-    return result;
+    return binaryOperation(numbers, multiply);
+
+    function multiply(lhs, rhs) {
+        return lhs * rhs;
+    }
 };
