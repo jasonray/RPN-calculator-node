@@ -1,5 +1,4 @@
-RPN-calculator-js
-===================
+# RPN-calculator-js [![Build Status](https://travis-ci.org/jasonray/RPN-calculator-node.svg)](https://travis-ci.org/jasonray/RPN-calculator-node)
 
 The RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.
 
