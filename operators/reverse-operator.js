@@ -3,15 +3,15 @@
 
 module.exports = function(numbers) {
 
-	var tempNumbers = [];
+    var tempNumbers = [];
 
-	while (!numbers.isEmpty()) {
-		tempNumbers.push(numbers.pop());
-	}
+    while (!numbers.isEmpty()) {
+        tempNumbers.push(numbers.pop());
+    }
 
-	for (var i=tempNumbers.length; i>0; i-- ) {
-		numbers.push( tempNumbers[i-1] );
-	}
+    for (var i = tempNumbers.length; i > 0; i--) {
+        numbers.push(tempNumbers[i - 1]);
+    }
 
-	return numbers.peek();
+    return numbers.peek();
 };
