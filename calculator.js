@@ -12,6 +12,7 @@ function Calculator() {
     self.operatorRegistry = initializeRegistry();
 
     function initializeRegistry() {
+        //todo: register alternate operands (like 'add');
         var registry = new Registry();
         registry.registerHandler("+", require("./operators/addition-operator"));
         registry.registerHandler("*", require("./operators/multiplication-operator"));
@@ -35,6 +36,7 @@ function Calculator() {
 Calculator.prototype.enter = function(operand) {
     var self = this;
 
+    //todo: use _.isNumber
     function isNumber(n) {
         return !isNaN(parseFloat(n)) && isFinite(n);
     }
