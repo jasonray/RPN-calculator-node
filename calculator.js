@@ -30,7 +30,6 @@ function Calculator() {
         return registry;
     }
 
-    return self;
 }
 
 Calculator.prototype.enter = function(operand) {
