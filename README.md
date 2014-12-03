@@ -27,7 +27,7 @@ You can run the calculator from the command line by running:
 node calculator-commandline.js 1 2 +
 ```
 
-Note that '*' has unix command line meaning, so us 'x' or '\*' for multiplication.
+Note that '\*' has unix command line meaning, so us 'x' or '\*' for multiplication.
 
 ```
 >node calculator-commandline.js 3 2 \*
