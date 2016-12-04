@@ -9,15 +9,18 @@ describe('absolute', function () {
         var calc = new Calculator();
         assert.equal(0, calc.perform("||"));
     });
+    it('description here', function () {
+        var calc = new Calculator();
+        // do stuff
+    });
+    it('absolute(0) == 0', function () {
+        var calc = new Calculator();
+        calc.enter(0);
+        assert.equal(0, calc.perform("||"));
+    });
 });
 
 
-module.exports.zero = function (test) {
-    var calc = new Calculator();
-    calc.enter(0);
-    test.equals(0, calc.perform("||"));
-    test.done();
-};
 
 module.exports.one = function (test) {
     var calc = new Calculator();
