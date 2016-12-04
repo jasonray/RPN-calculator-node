@@ -15,6 +15,11 @@ describe('addition', function () {
         calc.enter(4);
         assert.equal(34,calc.perform("+"))
     });
+    it('adding one numbers returns the number', function () {
+        var calc = new Calculator();
+        calc.enter(4);
+        assert.equal(4,calc.perform("+"))
+    });
 });
 
 module.exports.addOneNumber = function(test) {
