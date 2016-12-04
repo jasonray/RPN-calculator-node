@@ -2,22 +2,20 @@
 'use strict';
 
 var Calculator = require('../calculator');
+var assert = require('assert');
 
-module.exports.addNoNumbers = function(test) {
-    var calc = new Calculator();
-    var result = calc.perform("+");
-    test.equals(0, result);
-    test.done();
-};
-
-module.exports.addTwoNumbersReturnsSum = function(test) {
-    var calc = new Calculator();
-    calc.enter(30);
-    calc.enter(4);
-    var result = calc.perform("+");
-    test.equals(34, result);
-    test.done();
-};
+describe('addition', function () {
+    it('adding no numbers returns 0', function () {
+        var calc = new Calculator();
+        assert.equal(0,calc.perform("+"))
+    });
+    it('adding two numbers returns the sum', function () {
+        var calc = new Calculator();
+        calc.enter(30);
+        calc.enter(4);
+        assert.equal(34,calc.perform("+"))
+    });
+});
 
 module.exports.addOneNumber = function(test) {
     var calc = new Calculator();
