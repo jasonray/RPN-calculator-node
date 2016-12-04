@@ -46,40 +46,16 @@ describe('average', function () {
         calc.enter(5);
         assert.equal(calc.perform("AVE"),3);
     });
+    it('average numbers (with negative numbers)', function () {
+        var calc = new Calculator();
+        calc.enter(10);
+        calc.enter(-20);
+        calc.enter(50);
+        calc.enter(4);
+        assert.equal(calc.perform("AVE"),11);
+    });
 });
 
-
-module.exports.averageEmpty = function(test) {
-    var calc = new Calculator();
-    test.equals(0, calc.perform("AVE"));
-    test.done();
-};
-
-module.exports.averageOneNumber = function(test) {
-    var calc = new Calculator();
-    calc.enter(5);
-    test.equals(5, calc.perform("AVE"));
-    test.done();
-};
-
-module.exports.averageTwoNumbers = function(test) {
-    var calc = new Calculator();
-    calc.enter(5);
-    calc.enter(15);
-    test.equals(10, calc.perform("AVE"));
-    test.done();
-};
-
-module.exports.averageFiveNumbers = function(test) {
-    var calc = new Calculator();
-    calc.enter(1);
-    calc.enter(2);
-    calc.enter(3);
-    calc.enter(4);
-    calc.enter(5);
-    test.equals(3, calc.perform("AVE"));
-    test.done();
-};
 
 module.exports.averageUsingAverageKeyworkd = function(test) {
     var calc = new Calculator();
