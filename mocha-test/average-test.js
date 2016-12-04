@@ -76,25 +76,16 @@ describe('average', function () {
         calc.enter(2);
         assert.equal(calc.perform("ave"), 1);
     });
+    it('average two numbers with non integer result', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.enter(4);
+        assert.equal(calc.perform("AVE"), 2.5);
+    });
+    it('average two non-integer numbers with non integer result', function () {
+        var calc = new Calculator();
+        calc.enter(1.5);
+        calc.enter(3.5);
+        assert.equal(calc.perform("AVE"), 2.5);
+    });
 });
-
-
-module.exports.ensureEmptyAverageAffectsStack = function (test) {
-
-};
-
-module.exports.resultIsNonInteger = function (test) {
-    var calc = new Calculator();
-    calc.enter(1);
-    calc.enter(4);
-    test.equals(2.5, calc.perform("AVE"));
-    test.done();
-};
-
-module.exports.inputIsNonInteger = function (test) {
-    var calc = new Calculator();
-    calc.enter(1.5);
-    calc.enter(3.5);
-    test.equals(2.5, calc.perform("AVE"));
-    test.done();
-};
