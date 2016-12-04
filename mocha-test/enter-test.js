@@ -18,8 +18,5 @@ describe('calculator', function () {
             var calc = new Calculator();
             assert.equal(1.1, calc.enter(1.1))
         });
-        it('force fail', function () {
-            assert.equal(false, true)
-        });
     });
 });
