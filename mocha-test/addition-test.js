@@ -31,19 +31,14 @@ describe('addition', function () {
         calc.perform("+");
         assert.equal(6, calc.perform("+"));
     });
+    it('adding two numbers returns the sum (with negative numbers)', function () {
+        var calc = new Calculator();
+        calc.enter(-1);
+        calc.enter(-2);
+        assert.equal(-3, calc.perform("+"))
+    });
 });
 
-
-module.exports.addThreeNumbers = function (test) {
-    var calc = new Calculator();
-    calc.enter(1);
-    calc.enter(2);
-    calc.enter(3);
-    calc.perform("+");
-    var result = calc.perform("+");
-    test.equals(6, result);
-    test.done();
-};
 
 module.exports.addNegativeNumbers = function (test) {
     var calc = new Calculator();
