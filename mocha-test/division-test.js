@@ -60,7 +60,7 @@ describe('division', function () {
         calc.enter(6);
         calc.enter(4);
         var result = calc.perform("/");
-        assert.equal( result, 1.5);
+        assert.equal(result, 1.5);
     });
 });
 
