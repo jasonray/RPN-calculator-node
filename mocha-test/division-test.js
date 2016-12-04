@@ -54,7 +54,7 @@ describe('division', function () {
         var result = calc.perform("/");
         assert.equal(4, result);
     });
-    it('non integer result', function () {
+    it('divide with non integer result', function () {
         // this is 2/0 so this is an error
         var calc = new Calculator();
         calc.enter(6);
