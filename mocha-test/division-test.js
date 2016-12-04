@@ -2,6 +2,17 @@
 'use strict';
 
 var Calculator = require('../calculator');
+var assert = require('assert');
+
+describe('division', function () {
+    it('divide two numbers', function () {
+        var calc = new Calculator();
+        calc.enter(8);
+        calc.enter(2);
+        var result = calc.perform("/");
+        assert.equal(4, result);
+    });
+});
 
 module.exports.divideTwoNumber = function(test) {
     var calc = new Calculator();
