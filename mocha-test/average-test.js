@@ -37,6 +37,15 @@ describe('average', function () {
         calc.enter(5);
         assert.equal(calc.perform("AVE"),3);
     });
+    it('average five numbers', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.enter(2);
+        calc.enter(3);
+        calc.enter(4);
+        calc.enter(5);
+        assert.equal(calc.perform("AVE"),3);
+    });
 });
 
 
