@@ -2,6 +2,21 @@
 'use strict';
 
 var Calculator = require('../calculator');
+var assert = require('assert');
+
+describe('clear', function () {
+    it('clear on a ', function () {
+        var calc = new Calculator();
+        // do stuff
+    });
+});
+
+
+
+/*jslint node: true */
+'use strict';
+
+var Calculator = require('../calculator');
 
 module.exports.clearEmpty = function(test) {
     var calc = new Calculator();
