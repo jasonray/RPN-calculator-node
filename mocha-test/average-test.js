@@ -24,6 +24,12 @@ describe('average', function () {
         calc.enter(-5);
         assert.equal(calc.perform("AVE"),-5);
     });
+    it('average two numbers', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.enter(3);
+        assert.equal(calc.perform("AVE"),2);
+    });
 });
 
 
