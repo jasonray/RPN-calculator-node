@@ -25,25 +25,10 @@ describe('absolute', function () {
     });
     it('absolute(-1) == 1', function () {
         var calc = new Calculator();
-        calc.enter(-1);
-        assert.equal(1, calc.perform("||"));
+        calc.enter(-10);
+        assert.equal(10, calc.perform("||"));
     });
 });
-
-
-module.exports.negOne = function (test) {
-    var calc = new Calculator();
-    calc.enter(-1);
-    test.equals(1, calc.perform("||"));
-    test.done();
-};
-
-module.exports.negTen = function (test) {
-    var calc = new Calculator();
-    calc.enter(-10);
-    test.equals(10, calc.perform("||"));
-    test.done();
-};
 
 module.exports.ensureResultIsOnStack = function (test) {
     var calc = new Calculator();
