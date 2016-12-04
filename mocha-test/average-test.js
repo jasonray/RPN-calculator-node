@@ -66,29 +66,22 @@ describe('average', function () {
         calc.enter(3);
         assert.equal(calc.perform("ave"),2);
     });
+    it('empty average affects stack', function () {
+        //if empty average does not put 0 onto stack
+        //then average with 2 would be 2
+        //if empty average does put 0 onto stack
+        //then average with 2 would be 1 (0,1)
+        var calc = new Calculator();
+        calc.perform("ave");
+        calc.enter(2);
+        assert.equal(calc.perform("ave"),1);
+    });
 });
 
 
 
-module.exports.ensureOperatorNotCaseSensitive = function(test) {
-    var calc = new Calculator();
-    calc.enter(2);
-    calc.enter(4);
-    test.equals(3, calc.perform("ave"));
-    test.done();
-};
-
 module.exports.ensureEmptyAverageAffectsStack = function(test) {
-    //if empty average does not put 0 onto stack
-    //then average with 2 would be 2
-    //if empty average does put 0 onto stack
-    //then average with 2 would be 1 (0,1)
 
-    var calc = new Calculator();
-    calc.perform("ave");
-    calc.enter(2);
-    test.equals(1, calc.perform("ave"));
-    test.done();
 };
 
 module.exports.resultIsNonInteger = function(test) {
