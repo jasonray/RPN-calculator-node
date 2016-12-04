@@ -71,19 +71,3 @@ describe('division', function () {
         assert.equal(result, 2.0);
     });
 });
-
-
-module.exports.divideWithNonInteger = function (test) {
-    var calc = new Calculator();
-    calc.enter(2.5);
-    calc.enter(1.5);
-    var result = calc.perform("/");
-    floatsAreEqual(test, 1 + 2 / 3, result);
-    test.done();
-};
-
-function floatsAreEqual(test, x, y) {
-    var a = (Math.round(parseFloat(x) * 100) / 100);
-    var b = (Math.round(parseFloat(y) * 100) / 100);
-    test.equals(a, b);
-}
