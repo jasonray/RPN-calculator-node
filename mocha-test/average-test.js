@@ -14,6 +14,16 @@ describe('average', function () {
         calc.enter(0);
         assert.equal(calc.perform("AVE"),0);
     });
+    it('average of x is x', function () {
+        var calc = new Calculator();
+        calc.enter(5);
+        assert.equal(calc.perform("AVE"),5);
+    });
+    it('average of x is x (with negative numbers)', function () {
+        var calc = new Calculator();
+        calc.enter(-5);
+        assert.equal(calc.perform("AVE"),-5);
+    });
 });
 
 
