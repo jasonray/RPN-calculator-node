@@ -22,9 +22,21 @@ describe('division', function () {
         var result = calc.perform("/");
         assert.equal(0, result);
     });
-    it('divide with no numbers on stack', function () {
+    it('divide with no numbers on stack is error', function () {
         // this is 0/0 so this is an error
         var calc = new Calculator();
+        assert.throws(
+            function () {
+                calc.perform('/');
+            },
+            Error
+        );
+    });
+    it('divide by 0 is error', function () {
+        // this is 2/0 so this is an error
+        var calc = new Calculator();
+        calc.enter(2);
+        calc.enter(0);
         assert.throws(
             function () {
                 calc.perform('/');
