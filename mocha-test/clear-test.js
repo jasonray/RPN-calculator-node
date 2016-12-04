@@ -24,6 +24,24 @@ describe('clear', function () {
         calc.perform("C");
         assert.equal(calc.peek(), 0);
     });
+    it('ensure support for "C"', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.perform("C");
+        assert.equal(calc.peek(), 0);
+    });
+    it('ensure support for "c"', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.perform("c");
+        assert.equal(calc.peek(), 0);
+    });
+    it('ensure support for "clear"', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.perform("c");
+        assert.equal(calc.peek(), 0);
+    });
 });
 
 module.exports.ensureSupportForWordClear = function (test) {
