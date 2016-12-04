@@ -26,7 +26,7 @@ describe('clear', function () {
     });
 });
 
-module.exports.ensureSupportForWordClear = function(test) {
+module.exports.ensureSupportForWordClear = function (test) {
     var calc = new Calculator();
     calc.enter(1);
     calc.perform("clear");
@@ -34,7 +34,7 @@ module.exports.ensureSupportForWordClear = function(test) {
     test.done();
 };
 
-module.exports.ensureSupportForLowerCaseOperator = function(test) {
+module.exports.ensureSupportForLowerCaseOperator = function (test) {
     var calc = new Calculator();
     calc.enter(1);
     calc.perform("c");
@@ -42,7 +42,7 @@ module.exports.ensureSupportForLowerCaseOperator = function(test) {
     test.done();
 };
 
-module.exports.clearOnList = function(test) {
+module.exports.clearOnList = function (test) {
     var calc = new Calculator();
     calc.enter(1);
     calc.enter(1);
