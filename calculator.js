@@ -32,6 +32,12 @@ function Calculator() {
 
 }
 
+Calculator.prototype.peek = function() {
+    var self = this;
+
+    return self.numbers.peek();
+};
+
 Calculator.prototype.enter = function(operand) {
     var self = this;
 
