@@ -54,13 +54,13 @@ describe('average', function () {
         calc.enter(4);
         assert.equal(calc.perform("AVE"),11);
     });
-    it('average numbers (using "AVERAGE" keyword)', function () {
+    it('average numbers (using "AVERAGE" operator)', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(3);
         assert.equal(calc.perform("AVERAGE"),2);
     });
-    it('keyword not case sensitive', function () {
+    it('operator not case sensitive', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(3);
