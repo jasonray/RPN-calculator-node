@@ -38,6 +38,19 @@ describe('absolute', function () {
         calc.enter(-10);
         assert.equal(10, calc.perform("||"));
     });
+    it('ensure that operation works on the most recent item in stack', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.enter(2);
+        assert.equal(2, calc.perform("||"));
+    });
+    it('ensure that result is put back onto stack', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.enter(2);
+        assert.equal(2, calc.perform("||"));
+        assert.equal(2, calc.perform("||"));
+    });
 });
 
 module.exports.ensureResultIsOnStack = function (test) {
