@@ -54,38 +54,16 @@ describe('division', function () {
         var result = calc.perform("/");
         assert.equal(4, result);
     });
+    it('non integer result', function () {
+        // this is 2/0 so this is an error
+        var calc = new Calculator();
+        calc.enter(6);
+        calc.enter(4);
+        var result = calc.perform("/");
+        assert.equal( result, 1.5);
+    });
 });
 
-
-module.exports.divideThreeNumbers = function (test) {
-    var calc = new Calculator();
-    calc.enter(16);
-    calc.enter(8);
-    calc.enter(2);
-    calc.perform("/");
-    var result = calc.perform("/");
-    test.equals(4, result);
-    test.done();
-};
-
-module.exports.divideByZero = function (test) {
-    var calc = new Calculator();
-    calc.enter(5);
-    calc.enter(0);
-    test.throws(function () {
-        calc.perform("/");
-    }, Error);
-    test.done();
-};
-
-module.exports.resultNonInteger = function (test) {
-    var calc = new Calculator();
-    calc.enter(6);
-    calc.enter(4);
-    var result = calc.perform("/");
-    test.equals(1.5, result);
-    test.done();
-};
 
 module.exports.divideWithNonInteger = function (test) {
     var calc = new Calculator();
