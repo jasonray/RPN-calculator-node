@@ -37,10 +37,17 @@ describe('addition', function () {
         calc.enter(-2);
         assert.equal(-3, calc.perform("+"))
     });
-    // it('adding two numbers returns the sum (with decimal numbers)', function () {
-    //     var calc = new Calculator();
-    //     calc.enter(2.1);
-    //     calc.enter(3.2);
-    //     assert.equal(5.3, calc.perform("+"))
-    // });
+    it('adding two numbers returns the sum (with decimal numbers)', function () {
+        var calc = new Calculator();
+        calc.enter(2.1);
+        calc.enter(3.2);
+        assertFloatsEqual(calc.perform("+"), 5.3)
+    });
 });
+
+function assertFloatsEqual(actual, expected) {
+    // assert.equal(actual, expected);
+    var x = (Math.round(parseFloat(actual)) );
+    var y = (Math.round(parseFloat(expected)) );
+    assert.equal(x, y);
+}
