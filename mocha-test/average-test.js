@@ -7,35 +7,35 @@ var assert = require('assert');
 describe('average', function () {
     it('average on empty stack is 0', function () {
         var calc = new Calculator();
-        assert.equal(calc.perform("AVE"),0);
+        assert.equal(calc.perform("AVE"), 0);
     });
     it('average of 0 is 0', function () {
         var calc = new Calculator();
         calc.enter(0);
-        assert.equal(calc.perform("AVE"),0);
+        assert.equal(calc.perform("AVE"), 0);
     });
     it('average of x is x', function () {
         var calc = new Calculator();
         calc.enter(5);
-        assert.equal(calc.perform("AVE"),5);
+        assert.equal(calc.perform("AVE"), 5);
     });
     it('average of x is x (with negative numbers)', function () {
         var calc = new Calculator();
         calc.enter(-5);
-        assert.equal(calc.perform("AVE"),-5);
+        assert.equal(calc.perform("AVE"), -5);
     });
     it('average two numbers', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(3);
-        assert.equal(calc.perform("AVE"),2);
+        assert.equal(calc.perform("AVE"), 2);
     });
     it('average three numbers', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(3);
         calc.enter(5);
-        assert.equal(calc.perform("AVE"),3);
+        assert.equal(calc.perform("AVE"), 3);
     });
     it('average five numbers', function () {
         var calc = new Calculator();
@@ -44,7 +44,7 @@ describe('average', function () {
         calc.enter(3);
         calc.enter(4);
         calc.enter(5);
-        assert.equal(calc.perform("AVE"),3);
+        assert.equal(calc.perform("AVE"), 3);
     });
     it('average numbers (with negative numbers)', function () {
         var calc = new Calculator();
@@ -52,19 +52,19 @@ describe('average', function () {
         calc.enter(-20);
         calc.enter(50);
         calc.enter(4);
-        assert.equal(calc.perform("AVE"),11);
+        assert.equal(calc.perform("AVE"), 11);
     });
     it('average numbers (using "AVERAGE" operator)', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(3);
-        assert.equal(calc.perform("AVERAGE"),2);
+        assert.equal(calc.perform("AVERAGE"), 2);
     });
     it('operator not case sensitive', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(3);
-        assert.equal(calc.perform("ave"),2);
+        assert.equal(calc.perform("ave"), 2);
     });
     it('empty average affects stack', function () {
         //if empty average does not put 0 onto stack
@@ -74,17 +74,16 @@ describe('average', function () {
         var calc = new Calculator();
         calc.perform("ave");
         calc.enter(2);
-        assert.equal(calc.perform("ave"),1);
+        assert.equal(calc.perform("ave"), 1);
     });
 });
 
 
-
-module.exports.ensureEmptyAverageAffectsStack = function(test) {
+module.exports.ensureEmptyAverageAffectsStack = function (test) {
 
 };
 
-module.exports.resultIsNonInteger = function(test) {
+module.exports.resultIsNonInteger = function (test) {
     var calc = new Calculator();
     calc.enter(1);
     calc.enter(4);
@@ -92,7 +91,7 @@ module.exports.resultIsNonInteger = function(test) {
     test.done();
 };
 
-module.exports.inputIsNonInteger = function(test) {
+module.exports.inputIsNonInteger = function (test) {
     var calc = new Calculator();
     calc.enter(1.5);
     calc.enter(3.5);
