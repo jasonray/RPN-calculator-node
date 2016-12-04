@@ -15,20 +15,16 @@ describe('addition', function () {
         calc.enter(4);
         assert.equal(34,calc.perform("+"))
     });
-    it('adding one numbers returns the number', function () {
+    it('with three numbers on the stack, adding add the top two and puts onto stack', function () {
         var calc = new Calculator();
-        calc.enter(4);
-        assert.equal(4,calc.perform("+"))
+        calc.enter(1);
+        calc.enter(2);
+        calc.enter(3);
+        assert.equal(5,calc.perform("+"))
+        assert.equal(5,calc.peek());
     });
 });
 
-module.exports.addOneNumber = function(test) {
-    var calc = new Calculator();
-    calc.enter(4);
-    var result = calc.perform("+");
-    test.equals(4, result);
-    test.done();
-};
 
 module.exports.addThreeNumbers = function(test) {
     var calc = new Calculator();
