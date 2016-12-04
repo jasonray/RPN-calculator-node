@@ -44,14 +44,14 @@ describe('absolute', function () {
         calc.enter(2);
         assert.equal(2, calc.perform("||"));
     });
-    it('ensure that result is put back onto stack', function () {
+    it('ensure that result is put back onto stack (with positive number)', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
         assert.equal(2, calc.perform("||"));
         assert.equal(2, calc.perform("||"));
     });
-    it('ensure that result is put back onto stack', function () {
+    it('ensure that result is put back onto stack (with negative number)', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(-2);
