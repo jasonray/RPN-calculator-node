@@ -54,6 +54,12 @@ describe('average', function () {
         calc.enter(4);
         assert.equal(calc.perform("AVE"),11);
     });
+    it('average numbers (using "AVERAGE" keyword)', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.enter(3);
+        assert.equal(calc.perform("AVERAGE"),2);
+    });
 });
 
 
