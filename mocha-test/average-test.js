@@ -60,24 +60,15 @@ describe('average', function () {
         calc.enter(3);
         assert.equal(calc.perform("AVERAGE"),2);
     });
+    it('keyword not case sensitive', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        calc.enter(3);
+        assert.equal(calc.perform("ave"),2);
+    });
 });
 
 
-module.exports.averageUsingAverageKeyworkd = function(test) {
-    var calc = new Calculator();
-    calc.enter(2);
-    calc.enter(4);
-    test.equals(3, calc.perform("AVERAGE"));
-    test.done();
-};
-
-module.exports.averageWithNegativeNumbers = function(test) {
-    var calc = new Calculator();
-    calc.enter(2);
-    calc.enter(-4);
-    test.equals(-1, calc.perform("AVE"));
-    test.done();
-};
 
 module.exports.ensureOperatorNotCaseSensitive = function(test) {
     var calc = new Calculator();
