@@ -44,16 +44,18 @@ describe('division', function () {
             Error
         );
     });
+    it('divide by three numbers', function () {
+        // this is 2/0 so this is an error
+        var calc = new Calculator();
+        calc.enter(16);
+        calc.enter(8);
+        calc.enter(2);
+        calc.perform("/");
+        var result = calc.perform("/");
+        assert.equal(4, result);
+    });
 });
 
-
-module.exports.divideNoNumbers = function (test) {
-    var calc = new Calculator();
-    test.throws(function () {
-        calc.perform("/");
-    }, Error);
-    test.done();
-};
 
 module.exports.divideThreeNumbers = function (test) {
     var calc = new Calculator();
