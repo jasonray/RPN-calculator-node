@@ -14,7 +14,7 @@ describe('division', function () {
     });
 });
 
-module.exports.divideTwoNumber = function(test) {
+module.exports.divideTwoNumber = function (test) {
     var calc = new Calculator();
     calc.enter(8);
     calc.enter(2);
@@ -23,7 +23,7 @@ module.exports.divideTwoNumber = function(test) {
     test.done();
 };
 
-module.exports.divideOneNumber = function(test) {
+module.exports.divideOneNumber = function (test) {
     var calc = new Calculator();
     calc.enter(2);
     var result = calc.perform("/");
@@ -31,15 +31,15 @@ module.exports.divideOneNumber = function(test) {
     test.done();
 };
 
-module.exports.divideNoNumbers = function(test) {
+module.exports.divideNoNumbers = function (test) {
     var calc = new Calculator();
-    test.throws(function() {
+    test.throws(function () {
         calc.perform("/");
     }, Error);
     test.done();
 };
 
-module.exports.divideThreeNumbers = function(test) {
+module.exports.divideThreeNumbers = function (test) {
     var calc = new Calculator();
     calc.enter(16);
     calc.enter(8);
@@ -50,17 +50,17 @@ module.exports.divideThreeNumbers = function(test) {
     test.done();
 };
 
-module.exports.divideByZero = function(test) {
+module.exports.divideByZero = function (test) {
     var calc = new Calculator();
     calc.enter(5);
     calc.enter(0);
-    test.throws(function() {
+    test.throws(function () {
         calc.perform("/");
     }, Error);
     test.done();
 };
 
-module.exports.resultNonInteger = function(test) {
+module.exports.resultNonInteger = function (test) {
     var calc = new Calculator();
     calc.enter(6);
     calc.enter(4);
@@ -69,7 +69,7 @@ module.exports.resultNonInteger = function(test) {
     test.done();
 };
 
-module.exports.divideWithNonInteger = function(test) {
+module.exports.divideWithNonInteger = function (test) {
     var calc = new Calculator();
     calc.enter(2.5);
     calc.enter(1.5);
