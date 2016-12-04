@@ -9,6 +9,11 @@ describe('average', function () {
         var calc = new Calculator();
         assert.equal(calc.perform("AVE"),0);
     });
+    it('average of 0 is 0', function () {
+        var calc = new Calculator();
+        calc.enter(0);
+        assert.equal(calc.perform("AVE"),0);
+    });
 });
 
 
