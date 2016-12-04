@@ -23,16 +23,13 @@ describe('absolute', function () {
         calc.enter(1);
         assert.equal(1, calc.perform("||"));
     });
+    it('absolute(-1) == 1', function () {
+        var calc = new Calculator();
+        calc.enter(-1);
+        assert.equal(1, calc.perform("||"));
+    });
 });
 
-
-
-module.exports.one = function (test) {
-    var calc = new Calculator();
-    calc.enter(1);
-    test.equals(1, calc.perform("||"));
-    test.done();
-};
 
 module.exports.negOne = function (test) {
     var calc = new Calculator();
