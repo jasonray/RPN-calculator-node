@@ -22,6 +22,16 @@ describe('division', function () {
         var result = calc.perform("/");
         assert.equal(0, result);
     });
+    it('divide with no numbers on stack', function () {
+        // this is 0/0 so this is an error
+        var calc = new Calculator();
+        assert.throws(
+            function () {
+                calc.perform('/');
+            },
+            Error
+        );
+    });
 });
 
 
