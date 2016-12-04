@@ -58,20 +58,14 @@ describe('absolute', function () {
         calc.perform("||")
         assert.equal(2, calc.peek("+"));
     });
+    it('absolute of positive decimal number x is x', function () {
+        var calc = new Calculator();
+        calc.enter(1.5);
+        assert.equal(1.5, calc.perform("||"));
+    });
+    it('absolute of negative decimal number x is positive x', function () {
+        var calc = new Calculator();
+        calc.enter(-1.5);
+        assert.equal(1.5, calc.perform("||"));
+    });
 });
-
-module.exports.ensureResultIsOnStack = function (test) {
-    var calc = new Calculator();
-    calc.enter(1);
-    calc.enter(-5);
-    calc.perform("||")
-    test.equals(6, calc.perform("+"));
-    test.done();
-};
-
-module.exports.decimal = function (test) {
-    var calc = new Calculator();
-    calc.enter(-1.5);
-    test.equals(1.5, calc.perform("||"));
-    test.done();
-};
