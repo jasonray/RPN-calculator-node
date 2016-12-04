@@ -13,17 +13,27 @@ describe('absolute', function () {
         var calc = new Calculator();
         // do stuff
     });
-    it('absolute(0) == 0', function () {
+    it('absolute of 0 is 0', function () {
         var calc = new Calculator();
         calc.enter(0);
         assert.equal(0, calc.perform("||"));
     });
-    it('absolute(1) == 1', function () {
+    it('absolute of positive number x is x (1)', function () {
         var calc = new Calculator();
         calc.enter(1);
         assert.equal(1, calc.perform("||"));
     });
-    it('absolute(-1) == 1', function () {
+    it('absolute of negative number x is positive x (-1)', function () {
+        var calc = new Calculator();
+        calc.enter(-1);
+        assert.equal(1, calc.perform("||"));
+    });
+    it('absolute of positive number x is x (10)', function () {
+        var calc = new Calculator();
+        calc.enter(10);
+        assert.equal(10, calc.perform("||"));
+    });
+    it('absolute of negative number x is positive x (-10)', function () {
         var calc = new Calculator();
         calc.enter(-10);
         assert.equal(10, calc.perform("||"));
