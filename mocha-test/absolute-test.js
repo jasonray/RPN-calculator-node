@@ -18,6 +18,11 @@ describe('absolute', function () {
         calc.enter(0);
         assert.equal(0, calc.perform("||"));
     });
+    it('absolute(1) == 1', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        assert.equal(1, calc.perform("||"));
+    });
 });
 
 
