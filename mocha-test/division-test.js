@@ -6,30 +6,24 @@ var assert = require('assert');
 
 describe('division', function () {
     it('divide two numbers', function () {
+        // with two numbers, the first number on stack is x, second number is y, and divide is x/y
         var calc = new Calculator();
         calc.enter(8);
         calc.enter(2);
         var result = calc.perform("/");
         assert.equal(4, result);
     });
+    it('divide one number is 0', function () {
+        // with two numbers, the first number on stack is x, second number is y, and divide is x/y
+        // with one number, x=0, so 0/y
+
+        var calc = new Calculator();
+        calc.enter(2);
+        var result = calc.perform("/");
+        assert.equal(0, result);
+    });
 });
 
-module.exports.divideTwoNumber = function (test) {
-    var calc = new Calculator();
-    calc.enter(8);
-    calc.enter(2);
-    var result = calc.perform("/");
-    test.equals(4, result);
-    test.done();
-};
-
-module.exports.divideOneNumber = function (test) {
-    var calc = new Calculator();
-    calc.enter(2);
-    var result = calc.perform("/");
-    test.equals(0, result);
-    test.done();
-};
 
 module.exports.divideNoNumbers = function (test) {
     var calc = new Calculator();
