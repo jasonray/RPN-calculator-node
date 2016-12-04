@@ -36,7 +36,6 @@ describe('clear', function () {
         calc.enter(1);
         calc.enter(1);
         calc.enter(1);
-        calc.enter(1);
         calc.perform("C");
         assert.equal(calc.peek(), 0);
     });
