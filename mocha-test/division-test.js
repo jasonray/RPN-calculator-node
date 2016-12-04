@@ -62,6 +62,14 @@ describe('division', function () {
         var result = calc.perform("/");
         assert.equal(result, 1.5);
     });
+    it('divide with non integer operands', function () {
+        // this is 2/0 so this is an error
+        var calc = new Calculator();
+        calc.enter(4.8);
+        calc.enter(2.4);
+        var result = calc.perform("/");
+        assert.equal(result, 2.0);
+    });
 });
 
 
