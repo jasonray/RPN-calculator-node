@@ -37,23 +37,10 @@ describe('addition', function () {
         calc.enter(-2);
         assert.equal(-3, calc.perform("+"))
     });
+    // it('adding two numbers returns the sum (with decimal numbers)', function () {
+    //     var calc = new Calculator();
+    //     calc.enter(2.1);
+    //     calc.enter(3.2);
+    //     assert.equal(5.3, calc.perform("+"))
+    // });
 });
-
-
-module.exports.addNegativeNumbers = function (test) {
-    var calc = new Calculator();
-    calc.enter(-1);
-    calc.enter(-2);
-    var result = calc.perform("+");
-    test.equals(-3, result);
-    test.done();
-};
-
-module.exports.addDecimals = function (test) {
-    var calc = new Calculator();
-    calc.enter(1.5);
-    calc.enter(2.3);
-    var result = calc.perform("+");
-    test.equals(3.8, result);
-    test.done();
-};
