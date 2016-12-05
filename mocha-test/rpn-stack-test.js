@@ -33,8 +33,8 @@ describe('rpn stack', function () {
         var stack = new RpnStack();
         stack.push(2);
         stack.push(5);
-        assert.equal(5, stack.peek());
-        assert.equal(5, stack.peek());
+        assert.equal(stack.peek(), 5);
+        assert.equal(stack.peek(), 5);
     });
     it('emptyStackWithPopsNextReturns0', function () {
         var stack = new RpnStack();
