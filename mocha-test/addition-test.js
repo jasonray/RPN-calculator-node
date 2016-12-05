@@ -29,7 +29,7 @@ describe('addition', function () {
         calc.enter(2);
         calc.enter(3);
         calc.perform("+");
-        assert.equal(  calc.perform("+") , 6);
+        assert.equal(calc.perform("+"), 6);
     });
     it('adding two numbers returns the sum (with negative numbers)', function () {
         var calc = new Calculator();
