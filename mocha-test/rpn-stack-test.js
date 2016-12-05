@@ -11,8 +11,7 @@ var assert = require('assert');
 describe('rpn stack', function () {
     it('popEmptyStack', function () {
         var stack = new RpnStack();
-        var result = stack.pop();
-        assert.equal(result , 0);
+        assert.equal(stack.pop(), 0);
     });
     it('peekEmptyStack', function () {
         var stack = new RpnStack();
