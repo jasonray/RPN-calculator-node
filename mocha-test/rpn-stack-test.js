@@ -12,7 +12,7 @@ describe('rpn stack', function () {
     it('popEmptyStack', function () {
         var stack = new RpnStack();
         var result = stack.pop();
-        assert.equal(0, result);
+        assert.equal(result , 0);
     });
     it('peekEmptyStack', function () {
         var stack = new RpnStack();
