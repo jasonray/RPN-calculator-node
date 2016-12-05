@@ -35,7 +35,7 @@ describe('addition', function () {
         var calc = new Calculator();
         calc.enter(-1);
         calc.enter(-2);
-        assert.equal(calc.perform("+"), -3)
+        assert.equal(calc.perform("+"), -3);
     });
     it('adding two numbers returns the sum (with decimal numbers)', function () {
         var calc = new Calculator();
