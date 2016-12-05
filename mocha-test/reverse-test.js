@@ -13,8 +13,7 @@ describe('reverse', function () {
     it('reverseOneNumber', function () {
         var calc = new Calculator();
         calc.enter(1);
-        var result = calc.perform("reverse");
-        assert.equal(1, result);
+        assert.equal(calc.perform("reverse"), 1);
         assert.equal(1, calc.numbers.pop());
         assert.equal(0, calc.numbers.pop());
     });
@@ -22,8 +21,7 @@ describe('reverse', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
-        var result = calc.perform("reverse");
-        assert.equal(1, result);
+        assert.equal(calc.perform("reverse"), 1);
         assert.equal(1, calc.numbers.pop());
         assert.equal(2, calc.numbers.pop());
         assert.equal(0, calc.numbers.pop());
