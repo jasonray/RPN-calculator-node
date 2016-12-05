@@ -26,8 +26,8 @@ describe('rpn stack', function () {
         var stack = new RpnStack();
         stack.push(2);
         stack.push(5);
-        assert.equal(5, stack.pop());
-        assert.equal(2, stack.pop());
+        assert.equal(stack.pop(), 5);
+        assert.equal(stack.pop(), 2);
     });
     it('multiplePeeks', function () {
         var stack = new RpnStack();
