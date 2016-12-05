@@ -22,9 +22,9 @@ describe('reverse', function () {
         calc.enter(1);
         calc.enter(2);
         assert.equal(calc.perform("reverse"), 1);
-        assert.equal(1, calc.numbers.pop());
-        assert.equal(2, calc.numbers.pop());
-        assert.equal(0, calc.numbers.pop());
+        assert.equal(calc.numbers.pop(), 1);
+        assert.equal(calc.numbers.pop(), 2);
+        assert.equal(calc.numbers.pop(), 0);
     });
     it('reverseMultipleNumbers', function () {
         var calc = new Calculator();
