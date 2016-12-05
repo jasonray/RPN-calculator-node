@@ -41,7 +41,7 @@ describe('addition', function () {
         var calc = new Calculator();
         calc.enter(2.1);
         calc.enter(3.2);
-        assertFloatsEqual(calc.perform("+"), 5.3)
+        assertFloatsEqual(calc.perform("+"), 5.3);
     });
 });
 
