@@ -15,7 +15,7 @@ describe('rpn stack', function () {
     });
     it('peekEmptyStack', function () {
         var stack = new RpnStack();
-        assert.equal(0, stack.peek());
+        assert.equal(stack.peek(), 0);
     });
     it('peekFromPush', function () {
         var stack = new RpnStack();
