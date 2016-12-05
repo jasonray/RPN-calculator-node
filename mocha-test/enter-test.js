@@ -8,15 +8,15 @@ describe('calculator', function () {
     describe('Enter', function () {
         it('enter with string returns value', function () {
             var calc = new Calculator();
-            assert.equal(calc.enter("1"), 1)
+            assert.equal(calc.enter("1"), 1);
         });
         it('enter with number returns value', function () {
             var calc = new Calculator();
-            assert.equal(calc.enter(1), 1)
+            assert.equal(calc.enter(1), 1);
         });
         it('enter with non integer number returns value', function () {
             var calc = new Calculator();
-            assert.equal(calc.enter(1.1), 1.1)
+            assert.equal(calc.enter(1.1), 1.1);
         });
     });
 });
