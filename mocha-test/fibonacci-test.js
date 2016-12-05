@@ -7,7 +7,7 @@ var assert = require('assert');
 describe('fibonacci', function () {
     it('fib on empty is 0', function () {
         var calc = new Calculator();
-        assert.equal(   calc.perform("fib") ,0 );
+        assert.equal(calc.perform("fib"), 0);
     });
     it('fib on 1 is 1', function () {
         var calc = new Calculator();
