@@ -11,7 +11,7 @@ describe('division', function () {
         calc.enter(8);
         calc.enter(2);
         var result = calc.perform("/");
-        assert.equal(4, result);
+        assert.equal(result, 4);
     });
     it('divide one number is 0', function () {
         // with two numbers, the first number on stack is x, second number is y, and divide is x/y
@@ -20,7 +20,7 @@ describe('division', function () {
         var calc = new Calculator();
         calc.enter(2);
         var result = calc.perform("/");
-        assert.equal(0, result);
+        assert.equal(result, 0);
     });
     it('divide with no numbers on stack is error', function () {
         // this is 0/0 so this is an error
@@ -52,7 +52,7 @@ describe('division', function () {
         calc.enter(2);
         calc.perform("/");
         var result = calc.perform("/");
-        assert.equal(4, result);
+        assert.equal(result, 4);
     });
     it('divide with non integer result', function () {
         // this is 2/0 so this is an error
