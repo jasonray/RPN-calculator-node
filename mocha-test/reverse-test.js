@@ -7,8 +7,7 @@ var assert = require('assert');
 describe('reverse', function () {
     it('reverseNoNumbers', function () {
         var calc = new Calculator();
-        var result = calc.perform("reverse");
-        assert.equal(result, 0);
+        assert.equal(calc.perform("reverse"), 0);
         assert.equal(0, calc.numbers.pop());
     });
     it('reverseOneNumber', function () {
