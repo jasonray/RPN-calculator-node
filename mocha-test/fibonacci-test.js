@@ -2,89 +2,71 @@
 'use strict';
 
 var Calculator = require('../calculator');
+var assert = require('assert');
 
-module.exports.fibEmpty = function(test) {
-    var calc = new Calculator();
-    test.equals(0, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib1 = function(test) {
-    var calc = new Calculator();
-    calc.enter(1);
-    test.equals(1, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib2 = function(test) {
-    var calc = new Calculator();
-    calc.enter(2);
-    test.equals(1, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib3 = function(test) {
-    var calc = new Calculator();
-    calc.enter(3);
-    test.equals(2, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib4 = function(test) {
-    var calc = new Calculator();
-    calc.enter(4);
-    test.equals(3, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib5 = function(test) {
-    var calc = new Calculator();
-    calc.enter(5);
-    test.equals(5, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib6 = function(test) {
-    var calc = new Calculator();
-    calc.enter(6);
-    test.equals(8, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib7 = function(test) {
-    var calc = new Calculator();
-    calc.enter(7);
-    test.equals(13, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib8 = function(test) {
-    var calc = new Calculator();
-    calc.enter(8);
-    test.equals(21, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib30 = function(test) {
-    var calc = new Calculator();
-    calc.enter(30);
-    test.equals(832040, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.fib40 = function(test) {
-    var calc = new Calculator();
-    calc.enter(40);
-    test.equals(102334155, calc.perform("fib"));
-    test.done();
-};
-
-module.exports.nonInteger = function(test) {
-    var calc = new Calculator();
-    calc.enter(1.1);
-    test.throws(function() {
-        calc.perform("fib");
-    }, Error);
-
-    test.done();
-};
+describe('fibonacci', function () {
+    it('fib on empty is 0', function () {
+        var calc = new Calculator();
+        assert.equal(0, calc.perform("fib"));
+    });
+    it('fib on 1 is 1', function () {
+        var calc = new Calculator();
+        calc.enter(1);
+        assert.equal(calc.perform("fib"), 1);
+    });
+    it('fib on 2 is 1', function () {
+        var calc = new Calculator();
+        calc.enter(2);
+        assert.equal(calc.perform("fib"), 1);
+    });
+    it('fib on 3 is 2', function () {
+        var calc = new Calculator();
+        calc.enter(3);
+        assert.equal(calc.perform("fib"), 2);
+    });
+    it('fib on 4 is 3', function () {
+        var calc = new Calculator();
+        calc.enter(4);
+        assert.equal(calc.perform("fib"), 3);
+    });
+    it('fib on 5 is 5', function () {
+        var calc = new Calculator();
+        calc.enter(5);
+        assert.equal(calc.perform("fib"), 5);
+    });
+    it('fib on 6 is 8', function () {
+        var calc = new Calculator();
+        calc.enter(6);
+        assert.equal(calc.perform("fib"), 8);
+    });
+    it('fib on 7 is 13', function () {
+        var calc = new Calculator();
+        calc.enter(7);
+        assert.equal(calc.perform("fib"), 13);
+    });
+    it('fib on 8 is 21', function () {
+        var calc = new Calculator();
+        calc.enter(8);
+        assert.equal(calc.perform("fib"), 21);
+    });
+    it('fib on 30 is 832040', function () {
+        var calc = new Calculator();
+        calc.enter(30);
+        assert.equal(calc.perform("fib"), 832040);
+    });
+    it('fib on 40 is 102334155', function () {
+        var calc = new Calculator();
+        calc.enter(40);
+        assert.equal(calc.perform("fib"), 102334155);
+    });
+    it('fib on non integer is not defined', function () {
+        var calc = new Calculator();
+        calc.enter(1.5);
+        assert.throws(
+            function () {
+                calc.perform('fib');
+            },
+            Error
+        );
+    });
+});
