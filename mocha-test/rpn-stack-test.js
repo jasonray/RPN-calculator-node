@@ -20,7 +20,7 @@ describe('rpn stack', function () {
     it('peekFromPush', function () {
         var stack = new RpnStack();
         stack.push(2);
-        assert.equal(2, stack.peek());
+        assert.equal(stack.peek(), 2);
     });
     it('popFronmPush', function () {
         var stack = new RpnStack();
