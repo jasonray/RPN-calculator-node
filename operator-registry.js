@@ -6,12 +6,12 @@ function Registry() {
     self.handlers = {};
 }
 
-Registry.prototype.registerHandler = function(operatorCharacter, operatorMethod) {
+Registry.prototype.registerHandler = function (operatorCharacter, operatorMethod) {
     var self = this;
     self.handlers[operatorCharacter.toLowerCase()] = operatorMethod;
 };
 
-Registry.prototype.getOperatorMethod = function(operatorCharacter) {
+Registry.prototype.getOperatorMethod = function (operatorCharacter) {
     var self = this;
     var handler = self.handlers[operatorCharacter.toLowerCase()];
     if (typeof handler === 'function') {

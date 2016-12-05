@@ -9,7 +9,7 @@ console.log("post-stack: ", calculator.numbers.toString());
 
 function processCommandlineArgs(calculator) {
     var result = 0;
-    process.argv.forEach(function(val, index, array) {
+    process.argv.forEach(function (val, index, array) {
         if (index === 0) {
             //this is likely 'node'
         } else if (index === 1) {

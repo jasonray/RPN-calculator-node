@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "mocha": "^3.2.0",
     "nodeunit": "*",
     "underscore": "~1.7.0"
   },
@@ -12,7 +13,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node_modules/nodeunit/bin/nodeunit test/"
+    "test": "mocha mocha-test/"
   },
   "repository": {
     "type": "git",

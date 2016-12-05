@@ -29,10 +29,14 @@ function Calculator() {
         registry.registerHandler("reverse", require("./operators/reverse-operator"));
         return registry;
     }
-
 }
 
-Calculator.prototype.enter = function(operand) {
+Calculator.prototype.peek = function () {
+    var self = this;
+    return self.numbers.peek();
+};
+
+Calculator.prototype.enter = function (operand) {
     var self = this;
 
     function isNumber(n) {
@@ -48,7 +52,7 @@ Calculator.prototype.enter = function(operand) {
     return operand;
 };
 
-Calculator.prototype.perform = function(operatorCharacter) {
+Calculator.prototype.perform = function (operatorCharacter) {
     var self = this;
     var operator = self.operatorRegistry.getOperatorMethod(operatorCharacter);
 
