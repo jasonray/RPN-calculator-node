@@ -14,8 +14,8 @@ describe('reverse', function () {
         var calc = new Calculator();
         calc.enter(1);
         assert.equal(calc.perform("reverse"), 1);
-        assert.equal(1, calc.numbers.pop());
-        assert.equal(0, calc.numbers.pop());
+        assert.equal(  calc.numbers.pop(), 1);
+        assert.equal(  calc.numbers.pop(),0);
     });
     it('reverseTwoNumbers', function () {
         var calc = new Calculator();
