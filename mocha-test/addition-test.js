@@ -13,7 +13,7 @@ describe('addition', function () {
         var calc = new Calculator();
         calc.enter(30);
         calc.enter(4);
-        assert.equal(34, calc.perform("+"))
+        assert.equal(  calc.perform("+")  , 34 );
     });
     it('with three numbers on the stack, adding add the top two and puts onto stack', function () {
         var calc = new Calculator();
