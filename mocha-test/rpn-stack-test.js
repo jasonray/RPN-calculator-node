@@ -45,6 +45,6 @@ describe('rpn stack', function () {
     it('pushPop', function () {
         var stack = new RpnStack();
         stack.push(1);
-        assert.equal(1, stack.pop());
+        assert.equal(  stack.pop()  , 1);
     });
 });
