@@ -6,7 +6,7 @@ This is a variation of the java [https://github.com/jasonray/RPN-calculator] and
 
 How to run
 ==========
-This implementation utilizes node.js and nodeunit.
+This implementation utilizes node.js and mocha.
 
 Prereq's
 --------
