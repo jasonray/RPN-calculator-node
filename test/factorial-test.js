@@ -12,19 +12,19 @@ describe('factorial', function () {
     });
     it('factorial on nothing returns 1', function () {
         var calc = new Calculator();
-        assert.equal(calc.perform("!"), 1);
+        calc.perform("!").should.equal(1);
     });
     it('ensure that factorial puts result on stack', function () {
         var calc = new Calculator();
         calc.enter(3);
         calc.perform("!");
-        assert.equal(calc.peek(), 6);
+        calc.peek().should.equal(6);
     });
     it('execute factorial twice', function () {
         var calc = new Calculator();
         calc.enter(3);
         calc.perform("!");
-        assert.equal(calc.perform("!"), 720);
+        calc.perform("!").should.equal(720);
     });
     it('factorial on non-integer throws error', function () {
         var calc = new Calculator();
