@@ -11,7 +11,7 @@ describe('calculator', function () {
         });
         it('empty add', function () {
             var calc = new Calculator();
-            assert.equal(calc.perform("+"), 0);
+            calc.perform('+').should.equal(0);
         });
         it('enter on non-numeric value returns error, but allows for more entry', function () {
             var calc = new Calculator();
@@ -21,7 +21,7 @@ describe('calculator', function () {
                 },
                 Error
             );
-            assert.equal(calc.perform("+"), 0);
+            calc.perform('+').should.equal(0);
         });
     });
 });
