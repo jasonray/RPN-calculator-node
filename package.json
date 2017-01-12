@@ -5,7 +5,7 @@
   },
   "name": "RPN-calculator-node",
   "description": "The RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "calculator-commandline.js",
   "directories": {
     "test": "test"
