@@ -3,11 +3,12 @@
 
 var Calculator = require('../calculator');
 var assert = require('assert');
+var should = require('should');
 
 describe('absolute', function () {
     it('|| should be recognized by calculator', function () {
         var calc = new Calculator();
-        assert.equal(calc.perform("||"), 0);
+        calc.perform('||').should.equal(0);
     });
     it('absolute of 0 is 0', function () {
         var calc = new Calculator();
