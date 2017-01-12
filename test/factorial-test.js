@@ -8,7 +8,7 @@ describe('factorial', function () {
     it('factorial works on single number and returns product', function () {
         var calc = new Calculator();
         calc.enter(4);
-        assert.equal(calc.perform("!"), 24);
+        calc.perform("!").should.equal(24);
     });
     it('factorial on nothing returns 1', function () {
         var calc = new Calculator();
