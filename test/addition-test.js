@@ -29,13 +29,13 @@ describe('addition', function () {
         calc.enter(2);
         calc.enter(3);
         calc.perform("+");
-        assert.equal(calc.perform("+"), 6);
+        calc.perform("+").should.equal(6);
     });
     it('adding two numbers returns the sum (with negative numbers)', function () {
         var calc = new Calculator();
         calc.enter(-1);
         calc.enter(-2);
-        assert.equal(calc.perform("+"), -3);
+        calc.perform("+").should.equal(-3);
     });
     it('adding two numbers returns the sum (with decimal numbers)', function () {
         var calc = new Calculator();
