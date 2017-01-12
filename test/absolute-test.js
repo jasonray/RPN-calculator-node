@@ -63,6 +63,6 @@ describe('absolute', function () {
     it('absolute of negative decimal number x is positive x', function () {
         var calc = new Calculator();
         calc.enter(-1.5);
-        assert.equal(calc.perform("||"), 1.5);
+        calc.perform('||').should.equal(1.5);
     });
 });
