@@ -18,7 +18,7 @@ describe('absolute', function () {
     it('absolute of positive number x is x (1)', function () {
         var calc = new Calculator();
         calc.enter(1);
-        assert.equal(calc.perform("||"), 1);
+        calc.perform('||').should.equal(1);
     });
     it('absolute of negative number x is positive x (-1)', function () {
         var calc = new Calculator();
