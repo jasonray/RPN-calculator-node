@@ -45,8 +45,8 @@ describe('absolute', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
-        assert.equal(calc.perform("||"), 2);
-        assert.equal(calc.perform("||"), 2);
+        calc.perform('||').should.equal(2);
+        calc.perform('||').should.equal(2);
     });
     it('ensure that result is put back onto stack (with negative number)', function () {
         var calc = new Calculator();
