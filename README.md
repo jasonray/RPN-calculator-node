@@ -2,11 +2,14 @@
 
 The RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.
 
-This is a variation of the java [https://github.com/jasonray/RPN-calculator] and scala [https://github.com/jasonray/RPN-calculator-scala] implementations developed as part of past coding kata's.
+I have done three variations of the RPN calculator as exploratory into languages: 
+- java [https://github.com/jasonray/RPN-calculator] 
+- scala [https://github.com/jasonray/RPN-calculator-scala]
+- javascript on node.js [https://github.com/jasonray/RPN-calculator-node]
 
 How to run
 ==========
-This implementation utilizes node.js and nodeunit.
+This implementation utilizes node.js and mocha.
 
 Prereq's
 --------
@@ -27,7 +30,7 @@ You can run the calculator from the command line by running:
 node calculator-commandline.js 1 2 +
 ```
 
-Note that '*' has unix command line meaning, so us 'x' or '\*' for multiplication.
+Note that '\*' has unix command line meaning, so us 'x' or '\\\*' for multiplication.
 
 ```
 >node calculator-commandline.js 3 2 \*
