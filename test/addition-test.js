@@ -7,7 +7,7 @@ var assert = require('assert');
 describe('addition', function () {
     it('adding no numbers returns 0', function () {
         var calc = new Calculator();
-        assert.equal(calc.perform("+"), 0);
+        calc.perform("+").should.equal(0);
     });
     it('adding two numbers returns the sum', function () {
         var calc = new Calculator();
