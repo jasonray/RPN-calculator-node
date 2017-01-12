@@ -7,7 +7,7 @@ var assert = require('assert');
 describe('average', function () {
     it('average on empty stack is 0', function () {
         var calc = new Calculator();
-        assert.equal(calc.perform("AVE"), 0);
+        calc.perform('AVE').should.equal(0);
     });
     it('average of 0 is 0', function () {
         var calc = new Calculator();
