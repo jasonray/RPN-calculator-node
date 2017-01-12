@@ -20,8 +20,8 @@ describe('addition', function () {
         calc.enter(1);
         calc.enter(2);
         calc.enter(3);
-        assert.equal(calc.perform("+"), 5);
-        assert.equal(calc.peek(), 5);
+        calc.perform("+").should.equal(5);
+        calc.peek().should.equal(5);
     });
     it('with three numbers on the stack, adding twice results in the sum of those three numbers', function () {
         var calc = new Calculator();
