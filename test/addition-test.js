@@ -3,25 +3,26 @@
 
 var Calculator = require('../calculator');
 var assert = require('assert');
+var should = require('should');
 
 describe('addition', function () {
     it('adding no numbers returns 0', function () {
         var calc = new Calculator();
-        assert.equal(calc.perform("+"), 0);
+        calc.perform("+").should.equal(0);
     });
     it('adding two numbers returns the sum', function () {
         var calc = new Calculator();
         calc.enter(30);
         calc.enter(4);
-        assert.equal(calc.perform("+"), 34);
+        calc.perform("+").should.equal(34);
     });
     it('with three numbers on the stack, adding add the top two and puts onto stack', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
         calc.enter(3);
-        assert.equal(calc.perform("+"), 5);
-        assert.equal(calc.peek(), 5);
+        calc.perform("+").should.equal(5);
+        calc.peek().should.equal(5);
     });
     it('with three numbers on the stack, adding twice results in the sum of those three numbers', function () {
         var calc = new Calculator();
@@ -29,13 +30,13 @@ describe('addition', function () {
         calc.enter(2);
         calc.enter(3);
         calc.perform("+");
-        assert.equal(calc.perform("+"), 6);
+        calc.perform("+").should.equal(6);
     });
     it('adding two numbers returns the sum (with negative numbers)', function () {
         var calc = new Calculator();
         calc.enter(-1);
         calc.enter(-2);
-        assert.equal(calc.perform("+"), -3);
+        calc.perform("+").should.equal(-3);
     });
     it('adding two numbers returns the sum (with decimal numbers)', function () {
         var calc = new Calculator();
