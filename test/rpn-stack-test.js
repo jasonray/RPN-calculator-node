@@ -1,12 +1,7 @@
 /*jslint node: true */
 'use strict';
 
-/*jslint node: true */
-'use strict';
-
-var Calculator = require('../calculator');
 var RpnStack = require('../rpn-stack');
-var assert = require('assert');
 
 describe('rpn stack', function () {
     it('popEmptyStack', function () {
