@@ -3,6 +3,8 @@
 
 var Calculator = require('../calculator');
 var assert = require('assert');
+var should = require('should');
+
 
 describe('factorial', function () {
     it('factorial works on single number and returns product', function () {

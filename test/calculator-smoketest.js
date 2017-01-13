@@ -3,6 +3,8 @@
 
 var Calculator = require('../calculator');
 var assert = require('assert');
+var should = require('should');
+
 
 describe('calculator', function () {
     describe('smoke test', function () {

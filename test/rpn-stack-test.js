@@ -1,6 +1,7 @@
 /*jslint node: true */
 'use strict';
 
+var should = require('should');
 var RpnStack = require('../rpn-stack');
 
 describe('rpn stack', function () {

@@ -3,6 +3,7 @@
 
 var Calculator = require('../calculator');
 var assert = require('assert');
+var should = require('should');
 
 describe('division', function () {
     it('divide two numbers', function () {

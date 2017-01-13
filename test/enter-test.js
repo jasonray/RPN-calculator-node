@@ -2,6 +2,7 @@
 'use strict';
 
 var Calculator = require('../calculator');
+var should = require('should');
 
 describe('calculator', function () {
     describe('Enter', function () {

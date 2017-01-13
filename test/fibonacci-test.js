@@ -3,6 +3,7 @@
 
 var Calculator = require('../calculator');
 var assert = require('assert');
+var should = require('should');
 
 describe('fibonacci', function () {
     it('fib on empty is 0', function () {
