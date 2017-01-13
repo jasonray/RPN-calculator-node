@@ -2,29 +2,29 @@
 'use strict';
 
 var Calculator = require('../lib/calculator');
-var assert = require('assert');
+var should = require('should');
 
 describe('reverse', function () {
     it('reverseNoNumbers', function () {
         var calc = new Calculator();
-        assert.equal(calc.perform("reverse"), 0);
-        assert.equal(0, calc.numbers.pop());
+        calc.perform("reverse").should.equal(0);
+        calc.numbers.pop().should.equal(0);
     });
     it('reverseOneNumber', function () {
         var calc = new Calculator();
         calc.enter(1);
-        assert.equal(calc.perform("reverse"), 1);
-        assert.equal(calc.numbers.pop(), 1);
-        assert.equal(calc.numbers.pop(), 0);
+        calc.perform("reverse").should.equal(1);
+        calc.numbers.pop().should.equal(1);
+        calc.numbers.pop().should.equal(0);
     });
     it('reverseTwoNumbers', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
-        assert.equal(calc.perform("reverse"), 1);
-        assert.equal(calc.numbers.pop(), 1);
-        assert.equal(calc.numbers.pop(), 2);
-        assert.equal(calc.numbers.pop(), 0);
+        calc.perform("reverse").should.equal(1);
+        calc.numbers.pop().should.equal(1);
+        calc.numbers.pop().should.equal(2);
+        calc.numbers.pop().should.equal(0);
     });
     it('reverseMultipleNumbers', function () {
         var calc = new Calculator();
@@ -38,18 +38,17 @@ describe('reverse', function () {
         calc.enter(8);
         calc.enter(9);
         calc.enter(10);
-        var result = calc.perform("reverse");
-        assert.equal(1, result);
-        assert.equal(calc.numbers.pop(), 1);
-        assert.equal(calc.numbers.pop(), 2);
-        assert.equal(calc.numbers.pop(), 3);
-        assert.equal(calc.numbers.pop(), 4);
-        assert.equal(calc.numbers.pop(), 5);
-        assert.equal(calc.numbers.pop(), 6);
-        assert.equal(calc.numbers.pop(), 7);
-        assert.equal(calc.numbers.pop(), 8);
-        assert.equal(calc.numbers.pop(), 9);
-        assert.equal(calc.numbers.pop(), 10);
-        assert.equal(calc.numbers.pop(), 0);
+        calc.perform("reverse").should.equal(1);
+        calc.numbers.pop().should.equal(1);
+        calc.numbers.pop().should.equal(2);
+        calc.numbers.pop().should.equal(3);
+        calc.numbers.pop().should.equal(4);
+        calc.numbers.pop().should.equal(5);
+        calc.numbers.pop().should.equal(6);
+        calc.numbers.pop().should.equal(7);
+        calc.numbers.pop().should.equal(8);
+        calc.numbers.pop().should.equal(9);
+        calc.numbers.pop().should.equal(10);
+        calc.numbers.pop().should.equal(0);
     });
 });
