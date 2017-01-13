@@ -32,8 +32,7 @@ describe('multiplication', function () {
         var calc = new Calculator();
         calc.enter(-3);
         calc.enter(-2);
-        var result = calc.perform("*");
-        assert.equal(result, 6);
+        calc.perform("*").should.equal(  6);
     });
     it('use "x" operator', function () {
         var calc = new Calculator();
