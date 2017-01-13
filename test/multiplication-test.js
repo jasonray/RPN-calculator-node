@@ -2,7 +2,6 @@
 'use strict';
 
 var Calculator = require('../calculator');
-var assert = require('assert');
 
 describe('multiplication', function () {
     it('multiply empty stack is 0', function () {
