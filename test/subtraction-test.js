@@ -2,7 +2,6 @@
 'use strict';
 
 var Calculator = require('../calculator');
-var assert = require('assert');
 
 describe('subtraction', function () {
     it('subtractNoNumbers', function () {
