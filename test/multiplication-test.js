@@ -18,8 +18,7 @@ describe('multiplication', function () {
     it('multiply one number returns 0', function () {
         var calc = new Calculator();
         calc.enter(4);
-        var result = calc.perform("*");
-        assert.equal(result, 0);
+        calc.perform("*").should.equal(0);
     });
     it('multiply three numbers', function () {
         var calc = new Calculator();
