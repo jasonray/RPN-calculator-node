@@ -1,7 +1,7 @@
 /*jslint node: true */
 'use strict';
 
-var Calculator = require('../calculator');
+var Calculator = require('../lib/calculator');
 var assert = require('assert');
 
 describe('clear', function () {

@@ -4,7 +4,7 @@
 /*jslint node: true */
 'use strict';
 
-var Calculator = require('../calculator');
+var Calculator = require('../lib/calculator');
 var RpnStack = require('../rpn-stack');
 var assert = require('assert');
 
