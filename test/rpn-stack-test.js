@@ -1,50 +1,46 @@
 /*jslint node: true */
 'use strict';
 
-/*jslint node: true */
-'use strict';
-
-var Calculator = require('../calculator');
-var RpnStack = require('../rpn-stack');
-var assert = require('assert');
+var RpnStack = require('../lib/rpn-stack');
+var should = require('should');
 
 describe('rpn stack', function () {
     it('popEmptyStack', function () {
         var stack = new RpnStack();
-        assert.equal(stack.pop(), 0);
+        stack.pop().should.equal(0);
     });
     it('peekEmptyStack', function () {
         var stack = new RpnStack();
-        assert.equal(stack.peek(), 0);
+        stack.peek().should.equal(0);
     });
     it('peekFromPush', function () {
         var stack = new RpnStack();
         stack.push(2);
-        assert.equal(stack.peek(), 2);
+        stack.peek().should.equal(2);
     });
     it('popFronmPush', function () {
         var stack = new RpnStack();
         stack.push(2);
         stack.push(5);
-        assert.equal(stack.pop(), 5);
-        assert.equal(stack.pop(), 2);
+        stack.pop().should.equal(5);
+        stack.pop().should.equal(2);
     });
     it('multiplePeeks', function () {
         var stack = new RpnStack();
         stack.push(2);
         stack.push(5);
-        assert.equal(stack.peek(), 5);
-        assert.equal(stack.peek(), 5);
+        stack.peek().should.equal(5);
+        stack.peek().should.equal(5);
     });
     it('emptyStackWithPopsNextReturns0', function () {
         var stack = new RpnStack();
         stack.push(2);
-        assert.equal(stack.pop(), 2);
-        assert.equal(stack.peek(), 0);
+        stack.pop().should.equal(2);
+        stack.peek().should.equal(0);
     });
     it('pushPop', function () {
         var stack = new RpnStack();
         stack.push(1);
-        assert.equal(stack.pop(), 1);
+        stack.pop().should.equal(1);
     });
 });

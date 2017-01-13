@@ -1,19 +1,19 @@
 {
   "dependencies": {
     "mocha": "^3.2.0",
-    "nodeunit": "*",
-    "underscore": "~1.7.0"
+    "should": "^11.1.2",
+    "underscore": "^1.8.3"
   },
   "name": "RPN-calculator-node",
   "description": "The RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "main": "calculator-commandline.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha mocha-test/"
+    "test": "mocha test/"
   },
   "repository": {
     "type": "git",
