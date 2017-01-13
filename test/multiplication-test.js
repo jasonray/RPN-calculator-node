@@ -13,8 +13,7 @@ describe('multiplication', function () {
         var calc = new Calculator();
         calc.enter(5);
         calc.enter(4);
-        var result = calc.perform("*");
-        assert.equal(result, 20);
+        calc.perform("*").should.equal(20);
     });
     it('multiply one number returns 0', function () {
         var calc = new Calculator();
