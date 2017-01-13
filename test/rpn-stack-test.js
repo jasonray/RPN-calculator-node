@@ -5,7 +5,7 @@
 'use strict';
 
 var Calculator = require('../lib/calculator');
-var RpnStack = require('../rpn-stack');
+var RpnStack = require('../lib/rpn-stack');
 var assert = require('assert');
 
 describe('rpn stack', function () {
