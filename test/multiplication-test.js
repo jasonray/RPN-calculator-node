@@ -26,8 +26,7 @@ describe('multiplication', function () {
         calc.enter(2);
         calc.enter(3);
         calc.perform("*");
-        var result = calc.perform("*");
-        assert.equal(result, 24);
+        calc.perform("*").should.equal(24);
     });
     it('multiply negative numbers', function () {
         var calc = new Calculator();
