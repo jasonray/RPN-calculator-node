@@ -3,6 +3,7 @@
 
 var Calculator = require('../calculator');
 var assert = require('assert');
+var should = require('should');
 
 describe('addition', function () {
     it('adding no numbers returns 0', function () {

@@ -2,7 +2,6 @@
 'use strict';
 
 var Calculator = require('../calculator');
-var assert = require('assert');
 
 describe('average', function () {
     it('average on empty stack is 0', function () {

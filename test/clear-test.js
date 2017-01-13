@@ -2,7 +2,6 @@
 'use strict';
 
 var Calculator = require('../calculator');
-var assert = require('assert');
 
 describe('clear', function () {
     it('clear on a empty stack does not throw error', function () {
