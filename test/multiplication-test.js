@@ -7,8 +7,7 @@ var assert = require('assert');
 describe('multiplication', function () {
     it('multiply empty stack is 0', function () {
         var calc = new Calculator();
-        var result = calc.perform("*");
-        assert.equal(result, 0);
+        calc.perform("*").should.equal(0);
     });
     it('multiply two numbers returns product', function () {
         var calc = new Calculator();
