@@ -1,24 +1,24 @@
 /*jslint node: true */
 'use strict';
 
-var Calculator = require('../lib/calculator');
-var should = require('should');
+const Calculator = require('../lib/calculator');
+const should = require('should');
 
 describe('reverse', function () {
     it('reverseNoNumbers', function () {
-        var calc = new Calculator();
+        let calc = new Calculator();
         calc.perform("reverse").should.equal(0);
         calc.numbers.pop().should.equal(0);
     });
     it('reverseOneNumber', function () {
-        var calc = new Calculator();
+        let calc = new Calculator();
         calc.enter(1);
         calc.perform("reverse").should.equal(1);
         calc.numbers.pop().should.equal(1);
         calc.numbers.pop().should.equal(0);
     });
     it('reverseTwoNumbers', function () {
-        var calc = new Calculator();
+        let calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
         calc.perform("reverse").should.equal(1);
@@ -27,7 +27,7 @@ describe('reverse', function () {
         calc.numbers.pop().should.equal(0);
     });
     it('reverseMultipleNumbers', function () {
-        var calc = new Calculator();
+        let calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
         calc.enter(3);

@@ -1,45 +1,45 @@
 /*jslint node: true */
 'use strict';
 
-var RpnStack = require('../lib/rpn-stack');
-var should = require('should');
+const RpnStack = require('../lib/rpn-stack');
+const should = require('should');
 
 describe('rpn stack', function () {
     it('popEmptyStack', function () {
-        var stack = new RpnStack();
+        const stack = new RpnStack();
         stack.pop().should.equal(0);
     });
     it('peekEmptyStack', function () {
-        var stack = new RpnStack();
+        const stack = new RpnStack();
         stack.peek().should.equal(0);
     });
     it('peekFromPush', function () {
-        var stack = new RpnStack();
+        const stack = new RpnStack();
         stack.push(2);
         stack.peek().should.equal(2);
     });
     it('popFronmPush', function () {
-        var stack = new RpnStack();
+        const stack = new RpnStack();
         stack.push(2);
         stack.push(5);
         stack.pop().should.equal(5);
         stack.pop().should.equal(2);
     });
     it('multiplePeeks', function () {
-        var stack = new RpnStack();
+        const stack = new RpnStack();
         stack.push(2);
         stack.push(5);
         stack.peek().should.equal(5);
         stack.peek().should.equal(5);
     });
     it('emptyStackWithPopsNextReturns0', function () {
-        var stack = new RpnStack();
+        const stack = new RpnStack();
         stack.push(2);
         stack.pop().should.equal(2);
         stack.peek().should.equal(0);
     });
     it('pushPop', function () {
-        var stack = new RpnStack();
+        const stack = new RpnStack();
         stack.push(1);
         stack.pop().should.equal(1);
     });
