@@ -48,7 +48,7 @@ describe('addition', function () {
 
 function assertFloatsEqual(actual, expected) {
     // assert.equal(actual, expected);
-    var x = (Math.round(parseFloat(actual)) );
-    var y = (Math.round(parseFloat(expected)) );
+    let x = (Math.round(parseFloat(actual)) );
+    let y = (Math.round(parseFloat(expected)) );
     assert.equal(x, y);
 }
