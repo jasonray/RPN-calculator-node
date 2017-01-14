@@ -1,9 +1,9 @@
 /*jslint node: true */
 'use strict';
 
-var Calculator = require('../lib/calculator');
-var assert = require('assert');
-var should = require('should');
+const Calculator = require('../lib/calculator');
+const assert = require('assert');
+const should = require('should');
 
 describe('addition', function () {
     it('adding no numbers returns 0', function () {
