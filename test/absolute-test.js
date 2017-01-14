@@ -51,7 +51,7 @@ describe('absolute', function () {
         var calc = new Calculator();
         calc.enter(1);
         calc.enter(-2);
-        calc.perform("||")
+        calc.perform("||");
         calc.peek().should.equal(2);
     });
     it('absolute of positive decimal number x is x', function () {
