@@ -7,7 +7,7 @@ const should = require('should');
 describe('squareroot', function () {
     it('√ of 0 is 0', function () {
         let calc = new Calculator();
-        calc.enter(0)
+        calc.enter(0);
         calc.perform('√').should.equal(0);
     });
     it('√ of 1 is 1', function () {
