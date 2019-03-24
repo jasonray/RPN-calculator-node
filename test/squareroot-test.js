@@ -27,7 +27,7 @@ describe('squareroot', function () {
     });
     it('√ of 2 is approx 1.41', function () {
         let calc = new Calculator();
-        calc.enter(2)
+        calc.enter(2);
         const result=Math.round(calc.perform('√')*100)/100;
         result.should.equal(1.41);
     });
