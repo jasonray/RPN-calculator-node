@@ -4,7 +4,7 @@
 const Calculator = require('../lib/calculator');
 const should = require('should');
 
-describe('absolute', function () {
+describe('squareroot', function () {
     it('√ of 0 is 0', function () {
         let calc = new Calculator();
         calc.enter(0)
