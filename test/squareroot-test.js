@@ -15,4 +15,9 @@ describe('absolute', function () {
         calc.enter(1)
         calc.perform('squareroot').should.equal(1);
     });
+    it('√ of 4 is 2', function () {
+        let calc = new Calculator();
+        calc.enter(4)
+        calc.perform('√').should.equal(2);
+    });
 });
