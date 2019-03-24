@@ -22,7 +22,7 @@ describe('squareroot', function () {
     });
     it('√ of 4 is 2', function () {
         let calc = new Calculator();
-        calc.enter(4)
+        calc.enter(4);
         calc.perform('√').should.equal(2);
     });
     it('√ of 2 is approx 1.41', function () {
