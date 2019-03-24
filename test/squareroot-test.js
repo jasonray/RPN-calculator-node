@@ -3,6 +3,7 @@
 
 const Calculator = require('../lib/calculator');
 const should = require('should');
+const assert = require('assert');
 
 describe('squareroot', function () {
     it('√ of 0 is 0', function () {
@@ -30,5 +31,10 @@ describe('squareroot', function () {
         calc.enter(2)
         const result=Math.round(calc.perform('√')*100)/100;
         result.should.equal(1.41);
+    });
+    it('√ of -1 is NaN', function () {
+        let calc = new Calculator();
+        calc.enter(-1);
+        calc.perform('√').should.be.NaN();
     });
 });
