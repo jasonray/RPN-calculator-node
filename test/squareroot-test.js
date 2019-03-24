@@ -3,7 +3,6 @@
 
 const Calculator = require('../lib/calculator');
 const should = require('should');
-const assert = require('assert');
 
 describe('squareroot', function () {
     it('√ of 0 is 0', function () {
