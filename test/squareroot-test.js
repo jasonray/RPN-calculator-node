@@ -10,4 +10,9 @@ describe('absolute', function () {
         calc.enter(1)
         calc.perform('√').should.equal(1);
     });
+    it('squareroot of 1 is 1', function () {
+        let calc = new Calculator();
+        calc.enter(1)
+        calc.perform('squareroot').should.equal(1);
+    });
 });
