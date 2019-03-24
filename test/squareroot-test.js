@@ -5,6 +5,11 @@ const Calculator = require('../lib/calculator');
 const should = require('should');
 
 describe('absolute', function () {
+    it('√ of 0 is 0', function () {
+        let calc = new Calculator();
+        calc.enter(0)
+        calc.perform('√').should.equal(0);
+    });
     it('√ of 1 is 1', function () {
         let calc = new Calculator();
         calc.enter(1)
@@ -19,5 +24,11 @@ describe('absolute', function () {
         let calc = new Calculator();
         calc.enter(4)
         calc.perform('√').should.equal(2);
+    });
+    it('√ of 2 is 1.4', function () {
+        let calc = new Calculator();
+        calc.enter(2)
+        const result=Math.round(calc.perform('√')*100)/100
+        result.should.equal(1.41);
     });
 });
