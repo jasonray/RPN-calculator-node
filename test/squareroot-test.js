@@ -17,7 +17,7 @@ describe('squareroot', function () {
     });
     it('squareroot of 1 is 1', function () {
         let calc = new Calculator();
-        calc.enter(1)
+        calc.enter(1);
         calc.perform('squareroot').should.equal(1);
     });
     it('√ of 4 is 2', function () {
