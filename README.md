@@ -12,24 +12,24 @@ This implementation utilizes node.js and mocha.
 
 ### Prereqs
 To install node.js, either download or install using brew
-```
+``` bash
 brew install node
 ```
 
 To install the node modules:
-```
+``` bash
 npm install
 ```
 
 ### Run from command line
 You can run the calculator from the command line by running:
-```
+``` bash
 node calculator-commandline.js 1 2 +
 ```
 
 Note that '\*' has unix command line meaning, so us 'x' or '\\\*' for multiplication.
 
-```
+``` bash
 >node calculator-commandline.js 3 2 \*
 result: 6
 >node calculator-commandline.js 3 2 x
