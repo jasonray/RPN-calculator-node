@@ -7,13 +7,13 @@ const should = require('should');
 describe('reverse', function () {
     it('reverseNoNumbers', function () {
         let calc = new Calculator();
-        calc.perform("reverse").should.equal(0);
+        calc.perform('reverse').should.equal(0);
         calc.numbers.pop().should.equal(0);
     });
     it('reverseOneNumber', function () {
         let calc = new Calculator();
         calc.enter(1);
-        calc.perform("reverse").should.equal(1);
+        calc.perform('reverse').should.equal(1);
         calc.numbers.pop().should.equal(1);
         calc.numbers.pop().should.equal(0);
     });
@@ -21,7 +21,7 @@ describe('reverse', function () {
         let calc = new Calculator();
         calc.enter(1);
         calc.enter(2);
-        calc.perform("reverse").should.equal(1);
+        calc.perform('reverse').should.equal(1);
         calc.numbers.pop().should.equal(1);
         calc.numbers.pop().should.equal(2);
         calc.numbers.pop().should.equal(0);
@@ -38,7 +38,7 @@ describe('reverse', function () {
         calc.enter(8);
         calc.enter(9);
         calc.enter(10);
-        calc.perform("reverse").should.equal(1);
+        calc.perform('reverse').should.equal(1);
         calc.numbers.pop().should.equal(1);
         calc.numbers.pop().should.equal(2);
         calc.numbers.pop().should.equal(3);
