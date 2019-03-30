@@ -1,7 +1,7 @@
 /*jslint node: true */
 'use strict';
 
-var Calculator = require('./lib/calculator');
+const Calculator = require('./lib/calculator');
 
 function processCommandlineArgs(calculator) {
     var result = 0;
@@ -19,6 +19,6 @@ function processCommandlineArgs(calculator) {
     return result;
 }
 
-var calculator = new Calculator();
+const calculator = new Calculator();
 console.log("result: " + processCommandlineArgs(calculator));
 console.log("post-stack: ", calculator.numbers.toString());
