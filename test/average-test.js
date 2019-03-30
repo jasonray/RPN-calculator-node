@@ -72,7 +72,7 @@ describe('average', function () {
         //if empty average does put 0 onto stack
         //then average with 2 would be 1 (0,1)
         let calc = new Calculator();
-        calc.perform("ave");
+        calc.perform('ave');
         calc.enter(2);
         calc.perform('AVE').should.equal(1);
     });
