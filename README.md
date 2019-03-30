@@ -49,7 +49,7 @@ npm test
 
 A sample base implementation for addition is shown below:
 
-```
+``` javascript
 module.exports = function(numbers) {
 	var rhs = numbers.pop();
 	var lhs = numbers.pop();
