@@ -38,24 +38,24 @@ describe('multiplication', function () {
         let calc = new Calculator();
         calc.enter(5);
         calc.enter(4);
-        calc.perform("x").should.equal(20);
+        calc.perform('x').should.equal(20);
     });
     it('use "X" operator', function () {
         let calc = new Calculator();
         calc.enter(5);
         calc.enter(4);
-        calc.perform("X").should.equal(20);
+        calc.perform('X').should.equal(20);
     });
     it('multiply non integer numbers', function () {
         let calc = new Calculator();
         calc.enter(1.5);
         calc.enter(4);
-        calc.perform("X").should.equal(6);
+        calc.perform('X').should.equal(6);
     });
     it('multiply with non integer result', function () {
         let calc = new Calculator();
         calc.enter(1.5);
         calc.enter(3);
-        calc.perform("X").should.equal(4.5);
+        calc.perform('X').should.equal(4.5);
     });
 });
