@@ -3,10 +3,6 @@
 
 var Calculator = require('./lib/calculator');
 
-var calculator = new Calculator();
-console.log("result: " + processCommandlineArgs(calculator));
-console.log("post-stack: ", calculator.numbers.toString());
-
 function processCommandlineArgs(calculator) {
     var result = 0;
     process.argv.forEach(function (val, index, array) {
@@ -22,3 +18,7 @@ function processCommandlineArgs(calculator) {
     });
     return result;
 }
+
+var calculator = new Calculator();
+console.log("result: " + processCommandlineArgs(calculator));
+console.log("post-stack: ", calculator.numbers.toString());
