@@ -5,6 +5,13 @@ const Calculator = require('../lib/calculator');
 const assert = require('assert');
 const should = require('should');
 
+function assertFloatsEqual(actual, expected) {
+    // assert.equal(actual, expected);
+    let x = (Math.round(parseFloat(actual)));
+    let y = (Math.round(parseFloat(expected)));
+    assert.equal(x, y);
+}
+
 describe('addition', function () {
     it('adding no numbers returns 0', function () {
         let calc = new Calculator();
@@ -45,10 +52,3 @@ describe('addition', function () {
         assertFloatsEqual(calc.perform("+"), 5.3);
     });
 });
-
-function assertFloatsEqual(actual, expected) {
-    // assert.equal(actual, expected);
-    let x = (Math.round(parseFloat(actual)) );
-    let y = (Math.round(parseFloat(expected)) );
-    assert.equal(x, y);
-}
