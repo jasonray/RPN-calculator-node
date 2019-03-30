@@ -39,7 +39,7 @@ describe('clear', function () {
         calc.perform('C');
         calc.peek().should.equal(0);
     });
-    it('ensure support for 'C'', function () {
+    it('ensure support for "C"', function () {
         let calc = new Calculator();
         calc.enter(1);
         calc.peek().should.equal(1);
@@ -47,7 +47,7 @@ describe('clear', function () {
         calc.perform('C');
         calc.peek().should.equal(0);
     });
-    it('ensure support for 'C'', function () {
+    it('ensure support for "C"', function () {
         let calc = new Calculator();
         calc.enter(1);
         calc.peek().should.equal(1);
