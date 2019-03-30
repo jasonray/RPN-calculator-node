@@ -11,7 +11,7 @@ describe('division', function () {
         let calc = new Calculator();
         calc.enter(8);
         calc.enter(2);
-        calc.perform("/").should.equal(4);
+        calc.perform('/').should.equal(4);
     });
     it('divide one number is 0', function () {
         // with two numbers, the first number on stack is x, second number is y, and divide is x/y
@@ -19,7 +19,7 @@ describe('division', function () {
 
         let calc = new Calculator();
         calc.enter(2);
-        calc.perform("/").should.equal(0);
+        calc.perform('/').should.equal(0);
     });
     it('divide with no numbers on stack is error', function () {
         // this is 0/0 so this is an error
@@ -49,20 +49,20 @@ describe('division', function () {
         calc.enter(16);
         calc.enter(8);
         calc.enter(2);
-        calc.perform("/");
-        calc.perform("/").should.equal(4);
+        calc.perform('/');
+        calc.perform('/').should.equal(4);
     });
     it('divide with non integer result', function () {
         // this is 2/0 so this is an error
         let calc = new Calculator();
         calc.enter(6);
         calc.enter(4);
-        calc.perform("/").should.equal(1.5);
+        calc.perform('/').should.equal(1.5);
     });
     it('divide with non integer operands', function () {
         let calc = new Calculator();
         calc.enter(4.8);
         calc.enter(2.4);
-        calc.perform("/").should.equal(2);
+        calc.perform('/').should.equal(2);
     });
 });
