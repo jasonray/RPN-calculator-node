@@ -18,7 +18,7 @@ describe('factorial', function () {
     it('ensure that factorial puts result on stack', function () {
         let calc = new Calculator();
         calc.enter(3);
-        calc.perform("!");
+        calc.perform('!');
         calc.peek().should.equal(6);
     });
     it('execute factorial twice', function () {
