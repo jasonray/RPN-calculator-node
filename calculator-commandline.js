@@ -20,5 +20,5 @@ function processCommandlineArgs(calculator) {
 }
 
 const calculator = new Calculator();
-console.log("result: " + processCommandlineArgs(calculator));
+console.log('result: ' + processCommandlineArgs(calculator));
 console.log("post-stack: ", calculator.numbers.toString());
