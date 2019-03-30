@@ -5,7 +5,6 @@ const Calculator = require('../lib/calculator');
 const assert = require('assert');
 const should = require('should');
 
-
 describe('factorial', function () {
     it('factorial works on single number and returns product', function () {
         let calc = new Calculator();
