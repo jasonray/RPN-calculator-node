@@ -38,7 +38,7 @@ result: 6
 
 ### Unit Test
 To run the unit tests, run the following shell script:
-```
+``` bash
 npm test
 ```
 
