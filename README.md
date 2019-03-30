@@ -60,6 +60,6 @@ module.exports = function(numbers) {
 ```
 
 3) Register operator in `operator-register.js`.  To do this, add the following statement: 
-```
+``` javascript
 registry.registerHandler("+", require("./operators/addition-operator"));
 ```
