@@ -32,7 +32,7 @@ describe('double', function () {
         calc.enter(4.4);
         calc.perform('double').should.equal(8.8);
     });
-    it('double on non-integer works', function () {
+    it('double on negative works', function () {
         let calc = new Calculator();
         calc.enter(-4);
         calc.perform('double').should.equal(-8);
