@@ -5,7 +5,7 @@ const Calculator = require('../lib/calculator');
 const assert = require('assert');
 const should = require('should');
 
-31415926535
+//31415926535
 
 describe('pi', function () {
     it('pi on empty is 0', function () {
@@ -14,6 +14,9 @@ describe('pi', function () {
     });
     it('pi on 1', function () {
         runPiTest(1,3);
+    });
+    it('pi on 2', function () {
+        runPiTest(2,1);
     });
 
     function runPiTest(nthNumber, expected) {
