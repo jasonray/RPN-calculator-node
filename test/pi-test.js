@@ -24,6 +24,9 @@ describe('pi', function () {
     it('pi on 4', function () {
         runPiTest(4,1);
     });
+    it('pi on 5', function () {
+        runPiTest(5,5);
+    });
 
     function runPiTest(nthNumber, expected) {
         let calc = new Calculator();
