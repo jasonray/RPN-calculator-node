@@ -50,14 +50,14 @@ describe('pi', function () {
         calc.perform('pi').should.equal(expected);
     }
 
-    // it('fib on non integer is not defined', function () {
-    //     let calc = new Calculator();
-    //     calc.enter(1.5);
-    //     assert.throws(
-    //         function () {
-    //             calc.perform('fib');
-    //         },
-    //         Error
-    //     );
-    // });
+    it('pi on non integer is not defined', function () {
+         let calc = new Calculator();
+         calc.enter(1.5);
+         assert.throws(
+             function () {
+                 calc.perform('pi');
+             },
+             Error
+         );
+    });
 });
