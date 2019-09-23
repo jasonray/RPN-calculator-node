@@ -10,11 +10,11 @@ describe('pi', function () {
         let calc = new Calculator();
         calc.perform('pi').should.equal(0);
     });
-    // it('pi on 1 is 3', function () {
-    //     let calc = new Calculator();
-    //     calc.enter(3);
-    //     calc.perform('pi').should.equal(1);
-    // });
+    it('pi on 1 is 3', function () {
+        let calc = new Calculator();
+        calc.enter(1);
+        calc.perform('pi').should.equal(3);
+    });
 
     // it('fib on non integer is not defined', function () {
     //     let calc = new Calculator();
