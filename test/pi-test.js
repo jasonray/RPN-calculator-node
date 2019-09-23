@@ -60,4 +60,16 @@ describe('pi', function () {
              Error
          );
     });
+
+    it('pi on negative is not defined', function () {
+         let calc = new Calculator();
+         calc.enter(-2);
+         assert.throws(
+             function () {
+                 calc.perform('pi');
+             },
+             Error
+         );
+    });
+
 });
