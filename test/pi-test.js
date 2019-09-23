@@ -39,6 +39,12 @@ describe('pi', function () {
     it('pi on 10', function () {
         runPiTest(10,5);
     });
+    it('pi on 100', function () {
+        runPiTest(100,9);
+    });
+    it('pi on 1000', function () {
+        runPiTest(100,9);
+    });
 
     function runPiTest(nthNumber, expected) {
         let calc = new Calculator();
