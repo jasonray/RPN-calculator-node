@@ -27,7 +27,7 @@ describe('pi', function () {
     it('pi on 5', function () {
         runPiTest(5,5);
     });
-    it('pi on 5', function () {
+    it('pi on 6', function () {
         runPiTest(6,9);
     });
 
