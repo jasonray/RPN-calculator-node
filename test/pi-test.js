@@ -5,8 +5,6 @@ const Calculator = require('../lib/calculator');
 const assert = require('assert');
 const should = require('should');
 
-//35
-
 describe('pi', function () {
     it('pi on empty is 0', function () {
         let calc = new Calculator();
