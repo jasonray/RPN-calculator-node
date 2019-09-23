@@ -8,7 +8,7 @@ const should = require('should');
 describe('pi', function () {
     it('pi on empty is 0', function () {
         let calc = new Calculator();
-        calc.perform('fib').should.equal(0);
+        calc.perform('pi').should.equal(0);
     });
     // it('pi on 1 is 3', function () {
     //     let calc = new Calculator();
