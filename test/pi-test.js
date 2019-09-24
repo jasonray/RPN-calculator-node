@@ -12,6 +12,18 @@ describe('pi', function () {
         calc.perform('pi').should.equal(expected);
     }
 
+    it('pi using pi as operator', function () {
+        let calc = new Calculator();
+        calc.enter(1);
+        calc.perform('pi').should.equal(1);
+    });
+
+    it('pi using π as operator', function () {
+        let calc = new Calculator();
+        calc.enter(1);
+        calc.perform('π').should.equal(1);
+    });
+
     it('pi on 0', function () {
         runPiTest(0,3);
     });
