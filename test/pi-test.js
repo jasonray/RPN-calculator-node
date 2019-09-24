@@ -6,6 +6,12 @@ const assert = require('assert');
 const should = require('should');
 
 describe('pi', function () {
+    function runPiTest(nthNumber, expected) {
+        let calc = new Calculator();
+        calc.enter(nthNumber);
+        calc.perform('pi').should.equal(expected);
+    }
+
     it('pi on 0', function () {
         runPiTest(0,3);
     });
@@ -45,12 +51,6 @@ describe('pi', function () {
     it('pi on 1000', function () {
         runPiTest(100,9);
     });
-
-    function runPiTest(nthNumber, expected) {
-        let calc = new Calculator();
-        calc.enter(nthNumber);
-        calc.perform('pi').should.equal(expected);
-    }
 
     it('pi on non integer is not defined', function () {
          let calc = new Calculator();
