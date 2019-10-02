@@ -20,7 +20,7 @@ describe('max', function () {
         calc.enter(3);
         calc.perform('max').should.equal(5);
     });
-    it.skip('max with two numbers, low then high', function () {
+    it('max with two numbers, low then high', function () {
         const calc = new Calculator();
         calc.enter(3);
         calc.enter(5);
