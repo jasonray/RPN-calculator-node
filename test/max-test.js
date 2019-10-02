@@ -35,7 +35,7 @@ describe('max', function () {
         calc.enter(4);
         calc.perform('max').should.equal(5);
     });
-    it.skip('max with single negative number', function () {
+    it('max with single negative number', function () {
         const calc = new Calculator();
         calc.enter(-5);
         calc.perform('max').should.equal(-5);
