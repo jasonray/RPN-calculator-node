@@ -20,4 +20,19 @@ describe('max', function () {
         calc.enter(3);
         calc.perform('max').should.equal(5);
     });
+    it.skip('max with two numbers, low then high', function () {
+        const calc = new Calculator();
+        calc.enter(3);
+        calc.enter(5);
+        calc.perform('max').should.equal(5);
+    });
+    it.skip('max with several numbers', function () {
+        const calc = new Calculator();
+        calc.enter(1);
+        calc.enter(3);
+        calc.enter(5);
+        calc.enter(2);
+        calc.enter(4);
+        calc.perform('max').should.equal(5);
+    });
 });
