@@ -49,4 +49,13 @@ describe('max', function () {
         calc.enter(-4);
         calc.perform('max').should.equal(-1);
     });
-});
+    it.skip('max puts number back onto stack', function () {
+        const calc = new Calculator();
+        calc.enter(1);
+        calc.enter(3);
+        calc.enter(5);
+        calc.enter(2);
+        calc.enter(4);
+        calc.perform('max');
+        calc.peek().should.equal(5);
+    });});
