@@ -35,4 +35,18 @@ describe('max', function () {
         calc.enter(4);
         calc.perform('max').should.equal(5);
     });
+    it.skip('max with single negative number', function () {
+        const calc = new Calculator();
+        calc.enter(-5);
+        calc.perform('max').should.equal(-5);
+    });
+    it.skip('max with negative numbers', function () {
+        const calc = new Calculator();
+        calc.enter(-1);
+        calc.enter(-3);
+        calc.enter(-5);
+        calc.enter(-2);
+        calc.enter(-4);
+        calc.perform('max').should.equal(-1);
+    });
 });
