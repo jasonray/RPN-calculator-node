@@ -14,4 +14,10 @@ describe('max', function () {
         calc.enter(5);
         calc.perform('max').should.equal(5);
     });
+    it.skip('max with two numbers, high then low', function () {
+        const calc = new Calculator();
+        calc.enter(5);
+        calc.enter(3);
+        calc.perform('max').should.equal(5);
+    });
 });
