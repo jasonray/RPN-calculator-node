@@ -26,7 +26,7 @@ describe('max', function () {
         calc.enter(5);
         calc.perform('max').should.equal(5);
     });
-    it.skip('max with several numbers', function () {
+    it('max with several numbers', function () {
         const calc = new Calculator();
         calc.enter(1);
         calc.enter(3);
