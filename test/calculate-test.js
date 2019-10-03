@@ -18,4 +18,9 @@ const should = require('should');
             let calc = new Calculator();
             calc.calculate('-2 double').should.equal(-2);
         });
+        it.skip('operations puts item on stack', function () {
+            let calc = new Calculator();
+            calc.calculate('1 2 +');
+            calc.peek(3);
+        });
     });
