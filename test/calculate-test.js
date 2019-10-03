@@ -23,4 +23,8 @@ const should = require('should');
             calc.calculate('1 2 +');
             calc.peek(3);
         });
+        it.skip('with extra items on stack, binary operation operates on top two values', function () {
+            let calc = new Calculator();
+            calc.calculate('3 1 2 +').should.equal(3);
+        });
     });
