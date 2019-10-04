@@ -15,9 +15,9 @@ const should = require('should');
             let calc = new Calculator();
             calc.calculate('1 double').should.equal(2);
         });
-        it.skip('recognize negative value', function () {
+        it('recognize negative value', function () {
             let calc = new Calculator();
-            calc.calculate('-2 double').should.equal(-2);
+            calc.calculate('-2 double').should.equal(-4);
         });
         it.skip('operations puts item on stack', function () {
             let calc = new Calculator();
