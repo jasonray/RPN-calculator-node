@@ -28,7 +28,7 @@ const should = require('should');
             let calc = new Calculator();
             calc.calculate('3 1 2 +').should.equal(3);
         });
-        it.skip('multiple operations return value', function () {
+        it('multiple operations return value', function () {
             let calc = new Calculator();
             calc.calculate('3 1 2 + +').should.equal(6);
         });
