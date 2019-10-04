@@ -11,7 +11,7 @@ const should = require('should');
             let result = calc.calculate('1 2 +');
             result.should.equal(3);
         });
-        it.skip('monomial operation returns answer', function () {
+        it('monomial operation returns answer', function () {
             let calc = new Calculator();
             calc.calculate('1 double').should.equal(2);
         });
