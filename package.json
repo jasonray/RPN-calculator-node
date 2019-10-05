@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "mocha": "^6.2.0",
+    "mocha": "^6.2.1",
     "should": "^13.2.3",
     "underscore": "^1.8.3"
   },
