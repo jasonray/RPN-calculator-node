@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "lodash": "^4.17.15",
     "mocha": "^6.2.1",
     "should": "^13.2.3"
   },
