@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "mocha": "^6.2.0",
-    "should": "^13.2.3",
-    "underscore": "^1.8.3"
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.1",
+    "should": "^13.2.3"
   },
   "name": "RPN-calculator-node",
   "description": "The RPN [http://en.wikipedia.org/wiki/Reverse_Polish_notation] calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.",
