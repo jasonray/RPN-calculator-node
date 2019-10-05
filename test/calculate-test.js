@@ -32,4 +32,8 @@ const should = require('should');
             let calc = new Calculator();
             calc.calculate('3 1 2 + +').should.equal(6);
         });
+        it('empty string', function () {
+            let calc = new Calculator();
+            calc.calculate('').should.equal(0);
+        });
     });
