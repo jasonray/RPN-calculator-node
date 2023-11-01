@@ -9,7 +9,7 @@ function processCommandlineArgs(calculator) {
         if (index === 0) {
             //this is likely 'node'
         } else if (index === 1) {
-      //this is likely 'calculator.js'
+            //this is likely 'calculator.js'
         } else if (isNaN(val)) {
             result = calculator.perform(val);
         } else {
