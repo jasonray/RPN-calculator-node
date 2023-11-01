@@ -1,4 +1,7 @@
-# RPN-calculator-js [![Build Status](https://travis-ci.org/jasonray/RPN-calculator-node.svg)](https://travis-ci.org/jasonray/RPN-calculator-node)[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7e36e5509b0476f90a11691f70efbce)](https://app.codacy.com/app/jasonray/RPN-calculator-node?utm_source=github.com&utm_medium=referral&utm_content=jasonray/RPN-calculator-node&utm_campaign=Badge_Grade_Dashboard)
+# RPN-calculator-js
+
+[![Node.js CI](https://github.com/jasonray/RPN-calculator-node/actions/workflows/node.js.yml/badge.svg)](https://github.com/jasonray/RPN-calculator-node/actions/workflows/node.js.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d5e3527df15c423f94eb0d9f50addb3d)](https://app.codacy.com/gh/jasonray/RPN-calculator-node/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 
 The [RPN](http://en.wikipedia.org/wiki/Reverse_Polish_notation) calculator implementation is a good exercise for working through a languages capabilities and exploring OO strategies.
 
