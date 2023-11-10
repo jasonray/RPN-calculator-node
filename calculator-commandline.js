@@ -1,7 +1,7 @@
 /*jslint node: true */
-'use strict';
+"use strict";
 
-const Calculator = require('./lib/calculator');
+const Calculator = require("./lib/calculator");
 
 function processCommandlineArgs(calculator) {
     var result = 0;
